@@ -1,0 +1,18 @@
+#config file
+---
+
+inventory:
+ plugin: SimpleInventory
+ options:
+    host_file: "15janhosts.yml"
+    group_file: "15jangroups.yml"
+    defaults_file: "15jandefaults.yml"
+
+
+runners:
+ plugin: threaded
+ options:
+   num_workers: 50
+
+
+...
