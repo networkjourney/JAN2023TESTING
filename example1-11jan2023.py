@@ -6,9 +6,9 @@ multidevice = open(r"C:\Users\sagar\Music\multidevi.txt", "r")
 readmultidevice123 = multidevice.read().splitlines()
 print(readmultidevice123)
 for singledevice in readmultidevice123:
-    devicedictionary = {
-        "ip": singledevice,
-        "username": "admin",
+devicedictionary = {
+ "ip": singledevice,
+ "username": "admin",
         "password": "cisco",
         "device_type": "cisco_ios",
         "secret": "cisco@123",
