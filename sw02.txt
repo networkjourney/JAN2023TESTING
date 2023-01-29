@@ -1,0 +1,4 @@
+int gi0/1
+no shutdown
+no switchport
+ip address 6.6.6.6 255.255.255.0

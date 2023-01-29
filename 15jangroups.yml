@@ -1,0 +1,22 @@
+---
+branch1:
+  platform: ios
+  username: admin
+  password: cisco
+
+nxos1:
+  platform: nxos
+  username: admin
+  password: cisco
+
+
+f5ltm:
+  platform: f5
+  username: admin
+  password: cisco
+
+paloalto:
+  platform: panos
+  username: sw6
+  password: cisco
+...

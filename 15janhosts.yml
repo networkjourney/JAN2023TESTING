@@ -1,0 +1,15 @@
+---
+
+IOS1:
+ hostname: 172.16.26.247
+
+IOS2:
+ hostname: 172.16.26.246
+ groups:
+   - branch1
+
+IOS3:
+ hostname: 172.16.26.234
+ groups:
+   - branch1
+...

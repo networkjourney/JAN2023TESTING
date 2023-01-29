@@ -1,0 +1,2594 @@
+2022-10-29 09:16:38,808 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_strings': 'show ip int br'} on 2 hosts
+2022-10-29 09:16:38,813 - nornir.core.task -    ERROR -      start() - Host 'R1': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+TypeError: netmiko_send_command() missing 1 required positional argument: 'command_string'
+
+2022-10-29 09:16:38,814 - nornir.core.task -    ERROR -      start() - Host 'R2': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+TypeError: netmiko_send_command() missing 1 required positional argument: 'command_string'
+
+2022-10-29 09:17:07,658 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show ip int br'} on 2 hosts
+2022-10-29 09:17:10,552 - nornir.core.task -    ERROR -      start() - Host 'R1': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\base_connection.py", line 935, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\paramiko\client.py", line 435, in connect
+    self._auth(
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\paramiko\client.py", line 766, in _auth
+    raise saved_exception
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\paramiko\client.py", line 753, in _auth
+    self._transport.auth_password(username, password)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\paramiko\transport.py", line 1564, in auth_password
+    return self.auth_handler.wait_for_response(my_event)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\paramiko\auth_handler.py", line 259, in wait_for_response
+    raise e
+paramiko.ssh_exception.AuthenticationException: Authentication failed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir_netmiko\tasks\netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir\core\inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir\core\inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir_netmiko\connections\netmiko.py", line 59, in open
+    connection = ConnectHandler(**parameters)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\ssh_dispatcher.py", line 326, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\cisco\cisco_ios.py", line 17, in __init__
+    return super().__init__(*args, **kwargs)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\base_connection.py", line 350, in __init__
+    self._open()
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\base_connection.py", line 355, in _open
+    self.establish_connection()
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\base_connection.py", line 972, in establish_connection
+    raise NetmikoAuthenticationException(msg)
+netmiko.ssh_exception.NetmikoAuthenticationException: Authentication to device failed.
+
+Common causes of this problem are:
+1. Invalid username and password
+2. Incorrect SSH-key file
+3. Connecting to the wrong device
+
+Device settings: cisco_ios 172.16.29.100:22
+
+
+Authentication failed.
+
+2022-10-29 09:19:35,633 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show ip int br'} on 2 hosts
+2022-10-29 09:19:57,804 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show ip int br'} on 2 hosts
+2022-10-29 09:20:17,734 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show ip int br'} on 2 hosts
+2022-10-29 09:20:21,714 - nornir.core.task -    ERROR -      start() - Host 'R1': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\base_connection.py", line 935, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\paramiko\client.py", line 435, in connect
+    self._auth(
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\paramiko\client.py", line 766, in _auth
+    raise saved_exception
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\paramiko\client.py", line 753, in _auth
+    self._transport.auth_password(username, password)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\paramiko\transport.py", line 1564, in auth_password
+    return self.auth_handler.wait_for_response(my_event)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\paramiko\auth_handler.py", line 259, in wait_for_response
+    raise e
+paramiko.ssh_exception.AuthenticationException: Authentication failed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir_netmiko\tasks\netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir\core\inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir\core\inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir_netmiko\connections\netmiko.py", line 59, in open
+    connection = ConnectHandler(**parameters)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\ssh_dispatcher.py", line 326, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\cisco\cisco_ios.py", line 17, in __init__
+    return super().__init__(*args, **kwargs)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\base_connection.py", line 350, in __init__
+    self._open()
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\base_connection.py", line 355, in _open
+    self.establish_connection()
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\base_connection.py", line 972, in establish_connection
+    raise NetmikoAuthenticationException(msg)
+netmiko.ssh_exception.NetmikoAuthenticationException: Authentication to device failed.
+
+Common causes of this problem are:
+1. Invalid username and password
+2. Incorrect SSH-key file
+3. Connecting to the wrong device
+
+Device settings: cisco_ios 172.16.29.100:22
+
+
+Authentication failed.
+
+2022-10-29 09:20:55,707 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show ip int br'} on 2 hosts
+2022-10-29 09:22:27,439 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show ip int br'} on 2 hosts
+2022-10-29 09:25:06,253 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show ip int br'} on 2 hosts
+2022-10-29 09:26:29,981 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['get_facts', 'get_arp']} on 2 hosts
+2022-10-29 09:26:33,713 - nornir.core.task -    ERROR -      start() - Host 'R1': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir_napalm\plugins\tasks\napalm_get.py", line 43, in napalm_get
+    method = getattr(device, getter)
+AttributeError: 'IOSDriver' object has no attribute 'get_arp'
+
+2022-10-29 09:26:33,783 - nornir.core.task -    ERROR -      start() - Host 'R2': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir_napalm\plugins\tasks\napalm_get.py", line 43, in napalm_get
+    method = getattr(device, getter)
+AttributeError: 'IOSDriver' object has no attribute 'get_arp'
+
+2022-10-29 09:26:47,840 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['get_facts', 'get_interfaces']} on 2 hosts
+2022-10-29 09:27:54,062 -  nornir.core -     INFO -        run() - Running task 'napalm_cli' with args {'commands': ['show ip int br', 'show clock', 'show run | i hostname']} on 2 hosts
+2022-10-29 09:29:18,852 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_config' with args {'config_commands': ['logging host 2.2.2.2', 'router ospf 100']} on 2 hosts
+2022-10-29 09:29:43,658 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_config' with args {'config_commands': ['logging host 2.2.2.2', 'router ospf 100']} on 2 hosts
+2022-10-29 09:32:42,627 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_config' with args {'config_commands': ['logging host 5.5.5.5', ' router ospf 500', ' router ospf 501', ' logging host 7.7.7.7']} on 2 hosts
+2022-10-29 09:34:46,859 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_config' with args {'config_commands': ['C:\\Users\\sagar\\Music\\nornir config push.txt']} on 2 hosts
+2022-10-29 09:35:58,590 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_config' with args {'config_file': 'C:\\Users\\sagar\\Music\\nornir config push.txt'} on 2 hosts
+2022-10-29 10:01:45,462 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_config' with args {'config_file': 'C:\\Users\\sagar\\Music\\nornir config push.txt'} on 4 hosts
+2022-10-29 10:02:08,686 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_config' with args {'config_file': 'C:\\Users\\sagar\\Music\\nornir config push.txt'} on 4 hosts
+2022-10-29 10:02:29,134 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_config' with args {'config_file': 'C:\\Users\\sagar\\Music\\nornir config push.txt'} on 4 hosts
+2022-11-13 09:04:00,052 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_config' with args {'config_file': 'C:\\Users\\sagar\\Music\\nornir config push.txt'} on 6 hosts
+2022-11-13 09:04:24,427 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_config' with args {'config_file': 'C:\\Users\\sagar\\Music\\nornir config push.txt'} on 6 hosts
+2022-11-13 09:04:43,645 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_config' with args {'config_file': 'C:\\Users\\sagar\\Music\\nornir config push.txt'} on 6 hosts
+2022-11-21 22:57:08,896 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show ip int br'} on 3 hosts
+2022-11-21 22:57:08,906 - nornir.core.task -    ERROR -      start() - Host 'IOS1': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir_netmiko\tasks\netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir\core\inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir\core\inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir_netmiko\connections\netmiko.py", line 59, in open
+    connection = ConnectHandler(**parameters)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\ssh_dispatcher.py", line 321, in ConnectHandler
+    raise ValueError(
+ValueError: Unsupported 'device_type' currently supported platforms are: 
+a10
+accedian
+adtran_os
+alcatel_aos
+alcatel_sros
+allied_telesis_awplus
+apresia_aeos
+arista_eos
+aruba_os
+aruba_osswitch
+aruba_procurve
+avaya_ers
+avaya_vsp
+broadcom_icos
+brocade_fastiron
+brocade_fos
+brocade_netiron
+brocade_nos
+brocade_vdx
+brocade_vyos
+calix_b6
+cdot_cros
+centec_os
+checkpoint_gaia
+ciena_saos
+cisco_asa
+cisco_ftd
+cisco_ios
+cisco_nxos
+cisco_s300
+cisco_tp
+cisco_wlc
+cisco_xe
+cisco_xr
+cloudgenix_ion
+coriant
+dell_dnos9
+dell_force10
+dell_isilon
+dell_os10
+dell_os6
+dell_os9
+dell_powerconnect
+dlink_ds
+eltex
+eltex_esr
+endace
+enterasys
+ericsson_ipos
+extreme
+extreme_ers
+extreme_exos
+extreme_netiron
+extreme_nos
+extreme_slx
+extreme_vdx
+extreme_vsp
+extreme_wing
+f5_linux
+f5_ltm
+f5_tmsh
+flexvnf
+fortinet
+generic
+generic_termserver
+hp_comware
+hp_procurve
+huawei
+huawei_olt
+huawei_smartax
+huawei_vrpv8
+ipinfusion_ocnos
+juniper
+juniper_junos
+juniper_screenos
+keymile
+keymile_nos
+linux
+mellanox
+mellanox_mlnxos
+mikrotik_routeros
+mikrotik_switchos
+mrv_lx
+mrv_optiswitch
+netapp_cdot
+netgear_prosafe
+netscaler
+nokia_sros
+oneaccess_oneos
+ovs_linux
+paloalto_panos
+pluribus
+quanta_mesh
+rad_etx
+raisecom_roap
+ruckus_fastiron
+ruijie_os
+sixwind_os
+sophos_sfos
+supermicro_smis
+tplink_jetstream
+ubiquiti_edge
+ubiquiti_edgerouter
+ubiquiti_edgeswitch
+ubiquiti_unifiswitch
+vyatta_vyos
+vyos
+watchguard_fireware
+yamaha
+zte_zxros
+
+2022-11-21 22:57:08,906 - nornir.core.task -    ERROR -      start() - Host 'IOS2': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir_netmiko\tasks\netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir\core\inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir\core\inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir_netmiko\connections\netmiko.py", line 59, in open
+    connection = ConnectHandler(**parameters)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\ssh_dispatcher.py", line 321, in ConnectHandler
+    raise ValueError(
+ValueError: Unsupported 'device_type' currently supported platforms are: 
+a10
+accedian
+adtran_os
+alcatel_aos
+alcatel_sros
+allied_telesis_awplus
+apresia_aeos
+arista_eos
+aruba_os
+aruba_osswitch
+aruba_procurve
+avaya_ers
+avaya_vsp
+broadcom_icos
+brocade_fastiron
+brocade_fos
+brocade_netiron
+brocade_nos
+brocade_vdx
+brocade_vyos
+calix_b6
+cdot_cros
+centec_os
+checkpoint_gaia
+ciena_saos
+cisco_asa
+cisco_ftd
+cisco_ios
+cisco_nxos
+cisco_s300
+cisco_tp
+cisco_wlc
+cisco_xe
+cisco_xr
+cloudgenix_ion
+coriant
+dell_dnos9
+dell_force10
+dell_isilon
+dell_os10
+dell_os6
+dell_os9
+dell_powerconnect
+dlink_ds
+eltex
+eltex_esr
+endace
+enterasys
+ericsson_ipos
+extreme
+extreme_ers
+extreme_exos
+extreme_netiron
+extreme_nos
+extreme_slx
+extreme_vdx
+extreme_vsp
+extreme_wing
+f5_linux
+f5_ltm
+f5_tmsh
+flexvnf
+fortinet
+generic
+generic_termserver
+hp_comware
+hp_procurve
+huawei
+huawei_olt
+huawei_smartax
+huawei_vrpv8
+ipinfusion_ocnos
+juniper
+juniper_junos
+juniper_screenos
+keymile
+keymile_nos
+linux
+mellanox
+mellanox_mlnxos
+mikrotik_routeros
+mikrotik_switchos
+mrv_lx
+mrv_optiswitch
+netapp_cdot
+netgear_prosafe
+netscaler
+nokia_sros
+oneaccess_oneos
+ovs_linux
+paloalto_panos
+pluribus
+quanta_mesh
+rad_etx
+raisecom_roap
+ruckus_fastiron
+ruijie_os
+sixwind_os
+sophos_sfos
+supermicro_smis
+tplink_jetstream
+ubiquiti_edge
+ubiquiti_edgerouter
+ubiquiti_edgeswitch
+ubiquiti_unifiswitch
+vyatta_vyos
+vyos
+watchguard_fireware
+yamaha
+zte_zxros
+
+2022-11-21 22:57:08,907 - nornir.core.task -    ERROR -      start() - Host 'IOS3': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir_netmiko\tasks\netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir\core\inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir\core\inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir_netmiko\connections\netmiko.py", line 59, in open
+    connection = ConnectHandler(**parameters)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\ssh_dispatcher.py", line 321, in ConnectHandler
+    raise ValueError(
+ValueError: Unsupported 'device_type' currently supported platforms are: 
+a10
+accedian
+adtran_os
+alcatel_aos
+alcatel_sros
+allied_telesis_awplus
+apresia_aeos
+arista_eos
+aruba_os
+aruba_osswitch
+aruba_procurve
+avaya_ers
+avaya_vsp
+broadcom_icos
+brocade_fastiron
+brocade_fos
+brocade_netiron
+brocade_nos
+brocade_vdx
+brocade_vyos
+calix_b6
+cdot_cros
+centec_os
+checkpoint_gaia
+ciena_saos
+cisco_asa
+cisco_ftd
+cisco_ios
+cisco_nxos
+cisco_s300
+cisco_tp
+cisco_wlc
+cisco_xe
+cisco_xr
+cloudgenix_ion
+coriant
+dell_dnos9
+dell_force10
+dell_isilon
+dell_os10
+dell_os6
+dell_os9
+dell_powerconnect
+dlink_ds
+eltex
+eltex_esr
+endace
+enterasys
+ericsson_ipos
+extreme
+extreme_ers
+extreme_exos
+extreme_netiron
+extreme_nos
+extreme_slx
+extreme_vdx
+extreme_vsp
+extreme_wing
+f5_linux
+f5_ltm
+f5_tmsh
+flexvnf
+fortinet
+generic
+generic_termserver
+hp_comware
+hp_procurve
+huawei
+huawei_olt
+huawei_smartax
+huawei_vrpv8
+ipinfusion_ocnos
+juniper
+juniper_junos
+juniper_screenos
+keymile
+keymile_nos
+linux
+mellanox
+mellanox_mlnxos
+mikrotik_routeros
+mikrotik_switchos
+mrv_lx
+mrv_optiswitch
+netapp_cdot
+netgear_prosafe
+netscaler
+nokia_sros
+oneaccess_oneos
+ovs_linux
+paloalto_panos
+pluribus
+quanta_mesh
+rad_etx
+raisecom_roap
+ruckus_fastiron
+ruijie_os
+sixwind_os
+sophos_sfos
+supermicro_smis
+tplink_jetstream
+ubiquiti_edge
+ubiquiti_edgerouter
+ubiquiti_edgeswitch
+ubiquiti_unifiswitch
+vyatta_vyos
+vyos
+watchguard_fireware
+yamaha
+zte_zxros
+
+2022-11-21 22:57:33,973 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show ip int br'} on 3 hosts
+2022-11-21 22:59:31,288 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show ip int br'} on 3 hosts
+2022-11-21 23:01:38,426 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show ip int br'} on 3 hosts
+2022-11-21 23:05:38,205 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_config' with args {'config_commands': ['logging host 3.3.3.3', 'router ospf 100']} on 3 hosts
+2022-11-21 23:05:57,843 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_config' with args {'config_commands': ['logging host 3.3.3.3', 'router ospf 100']} on 3 hosts
+2022-11-21 23:06:16,498 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_config' with args {'config_commands': ['logging host 3.3.3.3', 'router ospf 100']} on 3 hosts
+2022-11-21 23:07:18,731 -  nornir.core -     INFO -        run() - Running task 'netmiko_file_transfer' with args {'source_file': 'nornir_global.log', 'destination_file': 'nornir_global.log'} on 3 hosts
+2022-11-21 23:07:18,735 - nornir.core.task -    ERROR -      start() - Host 'IOS1': task 'netmiko_file_transfer' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+TypeError: netmiko_file_transfer() missing 1 required positional argument: 'dest_file'
+
+2022-11-21 23:07:18,736 - nornir.core.task -    ERROR -      start() - Host 'IOS2': task 'netmiko_file_transfer' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+TypeError: netmiko_file_transfer() missing 1 required positional argument: 'dest_file'
+
+2022-11-21 23:07:18,736 - nornir.core.task -    ERROR -      start() - Host 'IOS3': task 'netmiko_file_transfer' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+TypeError: netmiko_file_transfer() missing 1 required positional argument: 'dest_file'
+
+2022-11-21 23:07:38,953 -  nornir.core -     INFO -        run() - Running task 'netmiko_file_transfer' with args {'source_file': 'nornir_global.log', 'dest_file': 'nornir_global.log'} on 3 hosts
+2022-11-21 23:07:40,992 - nornir.core.task -    ERROR -      start() - Host 'IOS3': task 'netmiko_file_transfer' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir_netmiko\tasks\netmiko_file_transfer.py", line 26, in netmiko_file_transfer
+    scp_result = file_transfer(
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\scp_functions.py", line 134, in file_transfer
+    verifyspace_and_transferfile(scp_transfer)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\scp_functions.py", line 39, in verifyspace_and_transferfile
+    scp_transfer.transfer_file()
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\scp_handler.py", line 363, in transfer_file
+    self.put_file()
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\scp_handler.py", line 376, in put_file
+    self.scp_conn.scp_transfer_file(self.source_file, destination)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\scp_handler.py", line 46, in scp_transfer_file
+    self.scp_client.put(source_file, dest_file)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\scp.py", line 161, in put
+    self._recv_confirm()
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\scp.py", line 367, in _recv_confirm
+    raise SCPException(asunicode(msg[1:]))
+scp.SCPException: Administratively disabled.
+
+
+2022-11-21 23:07:41,304 - nornir.core.task -    ERROR -      start() - Host 'IOS1': task 'netmiko_file_transfer' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir_netmiko\tasks\netmiko_file_transfer.py", line 26, in netmiko_file_transfer
+    scp_result = file_transfer(
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\scp_functions.py", line 134, in file_transfer
+    verifyspace_and_transferfile(scp_transfer)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\scp_functions.py", line 39, in verifyspace_and_transferfile
+    scp_transfer.transfer_file()
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\scp_handler.py", line 363, in transfer_file
+    self.put_file()
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\scp_handler.py", line 376, in put_file
+    self.scp_conn.scp_transfer_file(self.source_file, destination)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\scp_handler.py", line 46, in scp_transfer_file
+    self.scp_client.put(source_file, dest_file)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\scp.py", line 161, in put
+    self._recv_confirm()
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\scp.py", line 367, in _recv_confirm
+    raise SCPException(asunicode(msg[1:]))
+scp.SCPException: Administratively disabled.
+
+
+2022-11-21 23:08:57,177 -  nornir.core -     INFO -        run() - Running task 'netmiko_file_transfer' with args {'source_file': 'nornir_global.log', 'dest_file': 'nornir_global.log'} on 3 hosts
+2022-12-09 22:11:59,105 -  nornir.core -     INFO -        run() - Running task 'netmiko_file_transfer' with args {'source_file': 'nornir_global.log', 'dest_file': 'nornir_global.log'} on 6 hosts
+2022-12-09 22:12:02,115 - nornir.core.task -    ERROR -      start() - Host 'IOS2': task 'netmiko_file_transfer' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir_netmiko\tasks\netmiko_file_transfer.py", line 26, in netmiko_file_transfer
+    scp_result = file_transfer(
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\scp_functions.py", line 134, in file_transfer
+    verifyspace_and_transferfile(scp_transfer)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\scp_functions.py", line 39, in verifyspace_and_transferfile
+    scp_transfer.transfer_file()
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\scp_handler.py", line 363, in transfer_file
+    self.put_file()
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\scp_handler.py", line 376, in put_file
+    self.scp_conn.scp_transfer_file(self.source_file, destination)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\scp_handler.py", line 46, in scp_transfer_file
+    self.scp_client.put(source_file, dest_file)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\scp.py", line 161, in put
+    self._recv_confirm()
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\scp.py", line 367, in _recv_confirm
+    raise SCPException(asunicode(msg[1:]))
+scp.SCPException: Administratively disabled.
+
+
+2022-12-09 22:12:02,323 - nornir.core.task -    ERROR -      start() - Host 'IOS6': task 'netmiko_file_transfer' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir_netmiko\tasks\netmiko_file_transfer.py", line 26, in netmiko_file_transfer
+    scp_result = file_transfer(
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\scp_functions.py", line 134, in file_transfer
+    verifyspace_and_transferfile(scp_transfer)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\scp_functions.py", line 39, in verifyspace_and_transferfile
+    scp_transfer.transfer_file()
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\scp_handler.py", line 363, in transfer_file
+    self.put_file()
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\scp_handler.py", line 376, in put_file
+    self.scp_conn.scp_transfer_file(self.source_file, destination)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\scp_handler.py", line 46, in scp_transfer_file
+    self.scp_client.put(source_file, dest_file)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\scp.py", line 161, in put
+    self._recv_confirm()
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\scp.py", line 367, in _recv_confirm
+    raise SCPException(asunicode(msg[1:]))
+scp.SCPException: Administratively disabled.
+
+
+2022-12-09 22:12:02,346 - nornir.core.task -    ERROR -      start() - Host 'IOS4': task 'netmiko_file_transfer' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir_netmiko\tasks\netmiko_file_transfer.py", line 26, in netmiko_file_transfer
+    scp_result = file_transfer(
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\scp_functions.py", line 134, in file_transfer
+    verifyspace_and_transferfile(scp_transfer)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\scp_functions.py", line 39, in verifyspace_and_transferfile
+    scp_transfer.transfer_file()
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\scp_handler.py", line 363, in transfer_file
+    self.put_file()
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\scp_handler.py", line 376, in put_file
+    self.scp_conn.scp_transfer_file(self.source_file, destination)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\scp_handler.py", line 46, in scp_transfer_file
+    self.scp_client.put(source_file, dest_file)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\scp.py", line 161, in put
+    self._recv_confirm()
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\scp.py", line 367, in _recv_confirm
+    raise SCPException(asunicode(msg[1:]))
+scp.SCPException: Administratively disabled.
+
+
+2022-12-09 22:13:41,483 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_config' with args {'config_commands': ['ip scp server enable', 'router ospf 100']} on 6 hosts
+2022-12-09 22:13:43,134 -  nornir.core -     INFO -        run() - Running task 'netmiko_file_transfer' with args {'source_file': 'nornir_global.log', 'dest_file': 'nornir_global.log'} on 6 hosts
+2022-12-09 22:19:05,319 -  nornir.core -     INFO -        run() - Running task 'napalm_cli' with args {'commands': ['show ip int br', 'sh run | i hostname']} on 6 hosts
+2022-12-09 22:19:05,358 - nornir.core.task -    ERROR -      start() - Host 'IOS1': task 'napalm_cli' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir_napalm\plugins\tasks\napalm_cli.py", line 19, in napalm_cli
+    device = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir\core\inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir\core\inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir_napalm\plugins\connections\__init__.py", line 55, in open
+    network_driver = get_network_driver(platform)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\napalm\base\__init__.py", line 99, in get_network_driver
+    raise ModuleImportError(
+napalm.base.exceptions.ModuleImportError: Cannot import "cisco_ios". Is the library installed?
+
+2022-12-09 22:19:05,358 - nornir.core.task -    ERROR -      start() - Host 'IOS5': task 'napalm_cli' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir_napalm\plugins\tasks\napalm_cli.py", line 19, in napalm_cli
+    device = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir\core\inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir\core\inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir_napalm\plugins\connections\__init__.py", line 55, in open
+    network_driver = get_network_driver(platform)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\napalm\base\__init__.py", line 99, in get_network_driver
+    raise ModuleImportError(
+napalm.base.exceptions.ModuleImportError: Cannot import "cisco_ios". Is the library installed?
+
+2022-12-09 22:19:05,363 - nornir.core.task -    ERROR -      start() - Host 'IOS6': task 'napalm_cli' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir_napalm\plugins\tasks\napalm_cli.py", line 19, in napalm_cli
+    device = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir\core\inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir\core\inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir_napalm\plugins\connections\__init__.py", line 55, in open
+    network_driver = get_network_driver(platform)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\napalm\base\__init__.py", line 99, in get_network_driver
+    raise ModuleImportError(
+napalm.base.exceptions.ModuleImportError: Cannot import "cisco_ios". Is the library installed?
+
+2022-12-09 22:19:05,371 - nornir.core.task -    ERROR -      start() - Host 'IOS4': task 'napalm_cli' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir_napalm\plugins\tasks\napalm_cli.py", line 19, in napalm_cli
+    device = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir\core\inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir\core\inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir_napalm\plugins\connections\__init__.py", line 55, in open
+    network_driver = get_network_driver(platform)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\napalm\base\__init__.py", line 99, in get_network_driver
+    raise ModuleImportError(
+napalm.base.exceptions.ModuleImportError: Cannot import "cisco_ios". Is the library installed?
+
+2022-12-09 22:19:05,375 - nornir.core.task -    ERROR -      start() - Host 'IOS3': task 'napalm_cli' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir_napalm\plugins\tasks\napalm_cli.py", line 19, in napalm_cli
+    device = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir\core\inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir\core\inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir_napalm\plugins\connections\__init__.py", line 55, in open
+    network_driver = get_network_driver(platform)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\napalm\base\__init__.py", line 99, in get_network_driver
+    raise ModuleImportError(
+napalm.base.exceptions.ModuleImportError: Cannot import "cisco_ios". Is the library installed?
+
+2022-12-09 22:19:05,379 - nornir.core.task -    ERROR -      start() - Host 'IOS2': task 'napalm_cli' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir_napalm\plugins\tasks\napalm_cli.py", line 19, in napalm_cli
+    device = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir\core\inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir\core\inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir_napalm\plugins\connections\__init__.py", line 55, in open
+    network_driver = get_network_driver(platform)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\napalm\base\__init__.py", line 99, in get_network_driver
+    raise ModuleImportError(
+napalm.base.exceptions.ModuleImportError: Cannot import "cisco_ios". Is the library installed?
+
+2022-12-09 22:19:53,414 -  nornir.core -     INFO -        run() - Running task 'napalm_cli' with args {'commands': ['show ip int br', 'sh run | i hostname']} on 6 hosts
+2022-12-09 22:19:53,441 - nornir.core.task -    ERROR -      start() - Host 'IOS1': task 'napalm_cli' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir_napalm\plugins\tasks\napalm_cli.py", line 19, in napalm_cli
+    device = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir\core\inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir\core\inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir_napalm\plugins\connections\__init__.py", line 55, in open
+    network_driver = get_network_driver(platform)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\napalm\base\__init__.py", line 99, in get_network_driver
+    raise ModuleImportError(
+napalm.base.exceptions.ModuleImportError: Cannot import "cisco". Is the library installed?
+
+2022-12-09 22:19:53,447 - nornir.core.task -    ERROR -      start() - Host 'IOS2': task 'napalm_cli' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir_napalm\plugins\tasks\napalm_cli.py", line 19, in napalm_cli
+    device = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir\core\inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir\core\inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir_napalm\plugins\connections\__init__.py", line 55, in open
+    network_driver = get_network_driver(platform)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\napalm\base\__init__.py", line 99, in get_network_driver
+    raise ModuleImportError(
+napalm.base.exceptions.ModuleImportError: Cannot import "cisco". Is the library installed?
+
+2022-12-09 22:19:53,457 - nornir.core.task -    ERROR -      start() - Host 'IOS5': task 'napalm_cli' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir_napalm\plugins\tasks\napalm_cli.py", line 19, in napalm_cli
+    device = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir\core\inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir\core\inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir_napalm\plugins\connections\__init__.py", line 55, in open
+    network_driver = get_network_driver(platform)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\napalm\base\__init__.py", line 99, in get_network_driver
+    raise ModuleImportError(
+napalm.base.exceptions.ModuleImportError: Cannot import "cisco". Is the library installed?
+
+2022-12-09 22:19:53,461 - nornir.core.task -    ERROR -      start() - Host 'IOS4': task 'napalm_cli' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir_napalm\plugins\tasks\napalm_cli.py", line 19, in napalm_cli
+    device = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir\core\inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir\core\inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir_napalm\plugins\connections\__init__.py", line 55, in open
+    network_driver = get_network_driver(platform)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\napalm\base\__init__.py", line 99, in get_network_driver
+    raise ModuleImportError(
+napalm.base.exceptions.ModuleImportError: Cannot import "cisco". Is the library installed?
+
+2022-12-09 22:19:53,474 - nornir.core.task -    ERROR -      start() - Host 'IOS3': task 'napalm_cli' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir_napalm\plugins\tasks\napalm_cli.py", line 19, in napalm_cli
+    device = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir\core\inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir\core\inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir_napalm\plugins\connections\__init__.py", line 55, in open
+    network_driver = get_network_driver(platform)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\napalm\base\__init__.py", line 99, in get_network_driver
+    raise ModuleImportError(
+napalm.base.exceptions.ModuleImportError: Cannot import "cisco". Is the library installed?
+
+2022-12-09 22:19:53,476 - nornir.core.task -    ERROR -      start() - Host 'IOS6': task 'napalm_cli' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir_napalm\plugins\tasks\napalm_cli.py", line 19, in napalm_cli
+    device = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir\core\inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir\core\inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir_napalm\plugins\connections\__init__.py", line 55, in open
+    network_driver = get_network_driver(platform)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\napalm\base\__init__.py", line 99, in get_network_driver
+    raise ModuleImportError(
+napalm.base.exceptions.ModuleImportError: Cannot import "cisco". Is the library installed?
+
+2022-12-09 22:20:09,513 -  nornir.core -     INFO -        run() - Running task 'napalm_cli' with args {'commands': ['show ip int br', 'sh run | i hostname']} on 6 hosts
+2022-12-09 22:22:16,988 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['show run | i hostname', 'show ip int br']} on 6 hosts
+2022-12-09 22:22:17,958 - nornir.core.task -    ERROR -      start() - Host 'IOS5': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir_napalm\plugins\tasks\napalm_get.py", line 43, in napalm_get
+    method = getattr(device, getter)
+AttributeError: 'IOSDriver' object has no attribute 'get_show run | i hostname'
+
+2022-12-09 22:22:18,040 - nornir.core.task -    ERROR -      start() - Host 'IOS2': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir_napalm\plugins\tasks\napalm_get.py", line 43, in napalm_get
+    method = getattr(device, getter)
+AttributeError: 'IOSDriver' object has no attribute 'get_show run | i hostname'
+
+2022-12-09 22:22:18,062 - nornir.core.task -    ERROR -      start() - Host 'IOS1': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir_napalm\plugins\tasks\napalm_get.py", line 43, in napalm_get
+    method = getattr(device, getter)
+AttributeError: 'IOSDriver' object has no attribute 'get_show run | i hostname'
+
+2022-12-09 22:22:18,180 - nornir.core.task -    ERROR -      start() - Host 'IOS4': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir_napalm\plugins\tasks\napalm_get.py", line 43, in napalm_get
+    method = getattr(device, getter)
+AttributeError: 'IOSDriver' object has no attribute 'get_show run | i hostname'
+
+2022-12-09 22:22:18,180 - nornir.core.task -    ERROR -      start() - Host 'IOS6': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir_napalm\plugins\tasks\napalm_get.py", line 43, in napalm_get
+    method = getattr(device, getter)
+AttributeError: 'IOSDriver' object has no attribute 'get_show run | i hostname'
+
+2022-12-09 22:22:18,195 - nornir.core.task -    ERROR -      start() - Host 'IOS3': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir_napalm\plugins\tasks\napalm_get.py", line 43, in napalm_get
+    method = getattr(device, getter)
+AttributeError: 'IOSDriver' object has no attribute 'get_show run | i hostname'
+
+2022-12-09 22:23:21,505 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['get_arp_table', 'get_facts']} on 6 hosts
+2022-12-09 22:23:23,155 - nornir.core.task -    ERROR -      start() - Host 'IOS1': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\napalm\ios\ios.py", line 1118, in get_facts
+    _, os_version = line.split("Cisco IOS Software, ")
+ValueError: not enough values to unpack (expected 2, got 1)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir_napalm\plugins\tasks\napalm_get.py", line 44, in napalm_get
+    result[g] = method(**options)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\napalm\ios\ios.py", line 1121, in get_facts
+    _, os_version = re.split(r"Cisco IOS Software \[.*?\], ", line)
+ValueError: not enough values to unpack (expected 2, got 1)
+
+2022-12-09 22:23:23,492 - nornir.core.task -    ERROR -      start() - Host 'IOS2': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\napalm\ios\ios.py", line 1118, in get_facts
+    _, os_version = line.split("Cisco IOS Software, ")
+ValueError: not enough values to unpack (expected 2, got 1)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir_napalm\plugins\tasks\napalm_get.py", line 44, in napalm_get
+    result[g] = method(**options)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\napalm\ios\ios.py", line 1121, in get_facts
+    _, os_version = re.split(r"Cisco IOS Software \[.*?\], ", line)
+ValueError: not enough values to unpack (expected 2, got 1)
+
+2022-12-09 22:25:39,221 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['get_arp_table', 'get_facts']} on 6 hosts
+2022-12-09 22:25:41,684 - nornir.core.task -    ERROR -      start() - Host 'IOS2': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\napalm\ios\ios.py", line 1118, in get_facts
+    _, os_version = line.split("Cisco IOS Software, ")
+ValueError: not enough values to unpack (expected 2, got 1)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir_napalm\plugins\tasks\napalm_get.py", line 44, in napalm_get
+    result[g] = method(**options)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\napalm\ios\ios.py", line 1121, in get_facts
+    _, os_version = re.split(r"Cisco IOS Software \[.*?\], ", line)
+ValueError: not enough values to unpack (expected 2, got 1)
+
+2022-12-09 22:25:41,691 - nornir.core.task -    ERROR -      start() - Host 'IOS1': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\napalm\ios\ios.py", line 1118, in get_facts
+    _, os_version = line.split("Cisco IOS Software, ")
+ValueError: not enough values to unpack (expected 2, got 1)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir_napalm\plugins\tasks\napalm_get.py", line 44, in napalm_get
+    result[g] = method(**options)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\napalm\ios\ios.py", line 1121, in get_facts
+    _, os_version = re.split(r"Cisco IOS Software \[.*?\], ", line)
+ValueError: not enough values to unpack (expected 2, got 1)
+
+2022-12-09 22:26:59,917 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['get_arp_table', 'get_facts']} on 6 hosts
+2022-12-09 22:27:01,374 - nornir.core.task -    ERROR -      start() - Host 'IOS1': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\napalm\ios\ios.py", line 1118, in get_facts
+    _, os_version = line.split("Cisco IOS Software, ")
+ValueError: not enough values to unpack (expected 2, got 1)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir_napalm\plugins\tasks\napalm_get.py", line 44, in napalm_get
+    result[g] = method(**options)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\napalm\ios\ios.py", line 1121, in get_facts
+    _, os_version = re.split(r"Cisco IOS Software \[.*?\], ", line)
+ValueError: not enough values to unpack (expected 2, got 1)
+
+2022-12-09 22:27:02,803 - nornir.core.task -    ERROR -      start() - Host 'IOS2': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\base_connection.py", line 935, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\paramiko\client.py", line 435, in connect
+    self._auth(
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\paramiko\client.py", line 766, in _auth
+    raise saved_exception
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\paramiko\client.py", line 753, in _auth
+    self._transport.auth_password(username, password)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\paramiko\transport.py", line 1564, in auth_password
+    return self.auth_handler.wait_for_response(my_event)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\paramiko\auth_handler.py", line 259, in wait_for_response
+    raise e
+paramiko.ssh_exception.AuthenticationException: Authentication failed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir_napalm\plugins\tasks\napalm_get.py", line 32, in napalm_get
+    device = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir\core\inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir\core\inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir_napalm\plugins\connections\__init__.py", line 57, in open
+    connection.open()
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\napalm\ios\ios.py", line 170, in open
+    self.device = self._netmiko_open(
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\napalm\base\base.py", line 113, in _netmiko_open
+    self._netmiko_device = ConnectHandler(
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\ssh_dispatcher.py", line 326, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\cisco\cisco_ios.py", line 17, in __init__
+    return super().__init__(*args, **kwargs)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\base_connection.py", line 350, in __init__
+    self._open()
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\base_connection.py", line 355, in _open
+    self.establish_connection()
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\base_connection.py", line 972, in establish_connection
+    raise NetmikoAuthenticationException(msg)
+netmiko.ssh_exception.NetmikoAuthenticationException: Authentication to device failed.
+
+Common causes of this problem are:
+1. Invalid username and password
+2. Incorrect SSH-key file
+3. Connecting to the wrong device
+
+Device settings: cisco_ios 172.16.26.165:22
+
+
+Authentication failed.
+
+2022-12-09 22:27:02,803 - nornir.core.task -    ERROR -      start() - Host 'IOS3': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\base_connection.py", line 935, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\paramiko\client.py", line 435, in connect
+    self._auth(
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\paramiko\client.py", line 766, in _auth
+    raise saved_exception
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\paramiko\client.py", line 753, in _auth
+    self._transport.auth_password(username, password)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\paramiko\transport.py", line 1564, in auth_password
+    return self.auth_handler.wait_for_response(my_event)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\paramiko\auth_handler.py", line 259, in wait_for_response
+    raise e
+paramiko.ssh_exception.AuthenticationException: Authentication failed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir_napalm\plugins\tasks\napalm_get.py", line 32, in napalm_get
+    device = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir\core\inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir\core\inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir_napalm\plugins\connections\__init__.py", line 57, in open
+    connection.open()
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\napalm\ios\ios.py", line 170, in open
+    self.device = self._netmiko_open(
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\napalm\base\base.py", line 113, in _netmiko_open
+    self._netmiko_device = ConnectHandler(
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\ssh_dispatcher.py", line 326, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\cisco\cisco_ios.py", line 17, in __init__
+    return super().__init__(*args, **kwargs)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\base_connection.py", line 350, in __init__
+    self._open()
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\base_connection.py", line 355, in _open
+    self.establish_connection()
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\base_connection.py", line 972, in establish_connection
+    raise NetmikoAuthenticationException(msg)
+netmiko.ssh_exception.NetmikoAuthenticationException: Authentication to device failed.
+
+Common causes of this problem are:
+1. Invalid username and password
+2. Incorrect SSH-key file
+3. Connecting to the wrong device
+
+Device settings: cisco_ios 172.16.26.161:22
+
+
+Authentication failed.
+
+2022-12-09 22:31:41,808 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['sh ip int br']} on 6 hosts
+2022-12-09 22:31:43,215 - nornir.core.task -    ERROR -      start() - Host 'IOS1': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir_napalm\plugins\tasks\napalm_get.py", line 43, in napalm_get
+    method = getattr(device, getter)
+AttributeError: 'IOSDriver' object has no attribute 'get_sh ip int br'
+
+2022-12-09 22:31:43,262 - nornir.core.task -    ERROR -      start() - Host 'IOS6': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir_napalm\plugins\tasks\napalm_get.py", line 43, in napalm_get
+    method = getattr(device, getter)
+AttributeError: 'IOSDriver' object has no attribute 'get_sh ip int br'
+
+2022-12-09 22:31:43,293 - nornir.core.task -    ERROR -      start() - Host 'IOS4': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir_napalm\plugins\tasks\napalm_get.py", line 43, in napalm_get
+    method = getattr(device, getter)
+AttributeError: 'IOSDriver' object has no attribute 'get_sh ip int br'
+
+2022-12-09 22:31:43,324 - nornir.core.task -    ERROR -      start() - Host 'IOS5': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir_napalm\plugins\tasks\napalm_get.py", line 43, in napalm_get
+    method = getattr(device, getter)
+AttributeError: 'IOSDriver' object has no attribute 'get_sh ip int br'
+
+2022-12-09 22:31:45,044 - nornir.core.task -    ERROR -      start() - Host 'IOS2': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\base_connection.py", line 935, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\paramiko\client.py", line 435, in connect
+    self._auth(
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\paramiko\client.py", line 766, in _auth
+    raise saved_exception
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\paramiko\client.py", line 753, in _auth
+    self._transport.auth_password(username, password)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\paramiko\transport.py", line 1564, in auth_password
+    return self.auth_handler.wait_for_response(my_event)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\paramiko\auth_handler.py", line 259, in wait_for_response
+    raise e
+paramiko.ssh_exception.AuthenticationException: Authentication failed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir_napalm\plugins\tasks\napalm_get.py", line 32, in napalm_get
+    device = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir\core\inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir\core\inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir_napalm\plugins\connections\__init__.py", line 57, in open
+    connection.open()
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\napalm\ios\ios.py", line 170, in open
+    self.device = self._netmiko_open(
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\napalm\base\base.py", line 113, in _netmiko_open
+    self._netmiko_device = ConnectHandler(
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\ssh_dispatcher.py", line 326, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\cisco\cisco_ios.py", line 17, in __init__
+    return super().__init__(*args, **kwargs)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\base_connection.py", line 350, in __init__
+    self._open()
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\base_connection.py", line 355, in _open
+    self.establish_connection()
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\base_connection.py", line 972, in establish_connection
+    raise NetmikoAuthenticationException(msg)
+netmiko.ssh_exception.NetmikoAuthenticationException: Authentication to device failed.
+
+Common causes of this problem are:
+1. Invalid username and password
+2. Incorrect SSH-key file
+3. Connecting to the wrong device
+
+Device settings: cisco_ios 172.16.26.165:22
+
+
+Authentication failed.
+
+2022-12-09 22:31:45,046 - nornir.core.task -    ERROR -      start() - Host 'IOS3': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\base_connection.py", line 935, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\paramiko\client.py", line 435, in connect
+    self._auth(
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\paramiko\client.py", line 766, in _auth
+    raise saved_exception
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\paramiko\client.py", line 753, in _auth
+    self._transport.auth_password(username, password)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\paramiko\transport.py", line 1564, in auth_password
+    return self.auth_handler.wait_for_response(my_event)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\paramiko\auth_handler.py", line 259, in wait_for_response
+    raise e
+paramiko.ssh_exception.AuthenticationException: Authentication failed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir_napalm\plugins\tasks\napalm_get.py", line 32, in napalm_get
+    device = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir\core\inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir\core\inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir_napalm\plugins\connections\__init__.py", line 57, in open
+    connection.open()
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\napalm\ios\ios.py", line 170, in open
+    self.device = self._netmiko_open(
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\napalm\base\base.py", line 113, in _netmiko_open
+    self._netmiko_device = ConnectHandler(
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\ssh_dispatcher.py", line 326, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\cisco\cisco_ios.py", line 17, in __init__
+    return super().__init__(*args, **kwargs)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\base_connection.py", line 350, in __init__
+    self._open()
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\base_connection.py", line 355, in _open
+    self.establish_connection()
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\base_connection.py", line 972, in establish_connection
+    raise NetmikoAuthenticationException(msg)
+netmiko.ssh_exception.NetmikoAuthenticationException: Authentication to device failed.
+
+Common causes of this problem are:
+1. Invalid username and password
+2. Incorrect SSH-key file
+3. Connecting to the wrong device
+
+Device settings: cisco_ios 172.16.26.161:22
+
+
+Authentication failed.
+
+2022-12-09 22:32:01,888 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['get_facts']} on 6 hosts
+2022-12-09 22:32:03,419 - nornir.core.task -    ERROR -      start() - Host 'IOS1': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\napalm\ios\ios.py", line 1118, in get_facts
+    _, os_version = line.split("Cisco IOS Software, ")
+ValueError: not enough values to unpack (expected 2, got 1)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir_napalm\plugins\tasks\napalm_get.py", line 44, in napalm_get
+    result[g] = method(**options)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\napalm\ios\ios.py", line 1121, in get_facts
+    _, os_version = re.split(r"Cisco IOS Software \[.*?\], ", line)
+ValueError: not enough values to unpack (expected 2, got 1)
+
+2022-12-09 22:32:04,556 - nornir.core.task -    ERROR -      start() - Host 'IOS3': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\base_connection.py", line 935, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\paramiko\client.py", line 435, in connect
+    self._auth(
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\paramiko\client.py", line 766, in _auth
+    raise saved_exception
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\paramiko\client.py", line 753, in _auth
+    self._transport.auth_password(username, password)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\paramiko\transport.py", line 1564, in auth_password
+    return self.auth_handler.wait_for_response(my_event)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\paramiko\auth_handler.py", line 259, in wait_for_response
+    raise e
+paramiko.ssh_exception.AuthenticationException: Authentication failed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir_napalm\plugins\tasks\napalm_get.py", line 32, in napalm_get
+    device = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir\core\inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir\core\inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir_napalm\plugins\connections\__init__.py", line 57, in open
+    connection.open()
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\napalm\ios\ios.py", line 170, in open
+    self.device = self._netmiko_open(
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\napalm\base\base.py", line 113, in _netmiko_open
+    self._netmiko_device = ConnectHandler(
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\ssh_dispatcher.py", line 326, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\cisco\cisco_ios.py", line 17, in __init__
+    return super().__init__(*args, **kwargs)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\base_connection.py", line 350, in __init__
+    self._open()
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\base_connection.py", line 355, in _open
+    self.establish_connection()
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\base_connection.py", line 972, in establish_connection
+    raise NetmikoAuthenticationException(msg)
+netmiko.ssh_exception.NetmikoAuthenticationException: Authentication to device failed.
+
+Common causes of this problem are:
+1. Invalid username and password
+2. Incorrect SSH-key file
+3. Connecting to the wrong device
+
+Device settings: cisco_ios 172.16.26.161:22
+
+
+Authentication failed.
+
+2022-12-09 22:32:04,686 - nornir.core.task -    ERROR -      start() - Host 'IOS2': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\base_connection.py", line 935, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\paramiko\client.py", line 435, in connect
+    self._auth(
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\paramiko\client.py", line 766, in _auth
+    raise saved_exception
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\paramiko\client.py", line 753, in _auth
+    self._transport.auth_password(username, password)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\paramiko\transport.py", line 1564, in auth_password
+    return self.auth_handler.wait_for_response(my_event)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\paramiko\auth_handler.py", line 259, in wait_for_response
+    raise e
+paramiko.ssh_exception.AuthenticationException: Authentication failed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir_napalm\plugins\tasks\napalm_get.py", line 32, in napalm_get
+    device = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir\core\inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir\core\inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir_napalm\plugins\connections\__init__.py", line 57, in open
+    connection.open()
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\napalm\ios\ios.py", line 170, in open
+    self.device = self._netmiko_open(
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\napalm\base\base.py", line 113, in _netmiko_open
+    self._netmiko_device = ConnectHandler(
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\ssh_dispatcher.py", line 326, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\cisco\cisco_ios.py", line 17, in __init__
+    return super().__init__(*args, **kwargs)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\base_connection.py", line 350, in __init__
+    self._open()
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\base_connection.py", line 355, in _open
+    self.establish_connection()
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\base_connection.py", line 972, in establish_connection
+    raise NetmikoAuthenticationException(msg)
+netmiko.ssh_exception.NetmikoAuthenticationException: Authentication to device failed.
+
+Common causes of this problem are:
+1. Invalid username and password
+2. Incorrect SSH-key file
+3. Connecting to the wrong device
+
+Device settings: cisco_ios 172.16.26.165:22
+
+
+Authentication failed.
+
+2022-12-09 22:32:39,187 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['get_facts']} on 6 hosts
+2022-12-09 22:32:41,344 - nornir.core.task -    ERROR -      start() - Host 'IOS2': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\napalm\ios\ios.py", line 1118, in get_facts
+    _, os_version = line.split("Cisco IOS Software, ")
+ValueError: not enough values to unpack (expected 2, got 1)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir_napalm\plugins\tasks\napalm_get.py", line 44, in napalm_get
+    result[g] = method(**options)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\napalm\ios\ios.py", line 1121, in get_facts
+    _, os_version = re.split(r"Cisco IOS Software \[.*?\], ", line)
+ValueError: not enough values to unpack (expected 2, got 1)
+
+2022-12-09 22:32:41,348 - nornir.core.task -    ERROR -      start() - Host 'IOS1': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\napalm\ios\ios.py", line 1118, in get_facts
+    _, os_version = line.split("Cisco IOS Software, ")
+ValueError: not enough values to unpack (expected 2, got 1)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir_napalm\plugins\tasks\napalm_get.py", line 44, in napalm_get
+    result[g] = method(**options)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\napalm\ios\ios.py", line 1121, in get_facts
+    _, os_version = re.split(r"Cisco IOS Software \[.*?\], ", line)
+ValueError: not enough values to unpack (expected 2, got 1)
+
+2022-12-09 22:35:32,514 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_config' with args {'config_commands': ['ip scp server enable', 'router ospf 100']} on 6 hosts
+2022-12-09 22:35:35,294 - nornir.core.task -    ERROR -      start() - Host 'IOS1': task 'netmiko_send_config' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\base_connection.py", line 935, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\paramiko\client.py", line 435, in connect
+    self._auth(
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\paramiko\client.py", line 766, in _auth
+    raise saved_exception
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\paramiko\client.py", line 753, in _auth
+    self._transport.auth_password(username, password)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\paramiko\transport.py", line 1564, in auth_password
+    return self.auth_handler.wait_for_response(my_event)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\paramiko\auth_handler.py", line 259, in wait_for_response
+    raise e
+paramiko.ssh_exception.AuthenticationException: Authentication failed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir_netmiko\tasks\netmiko_send_config.py", line 28, in netmiko_send_config
+    net_connect = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir\core\inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir\core\inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir_netmiko\connections\netmiko.py", line 59, in open
+    connection = ConnectHandler(**parameters)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\ssh_dispatcher.py", line 326, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\cisco\cisco_ios.py", line 17, in __init__
+    return super().__init__(*args, **kwargs)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\base_connection.py", line 350, in __init__
+    self._open()
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\base_connection.py", line 355, in _open
+    self.establish_connection()
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\base_connection.py", line 972, in establish_connection
+    raise NetmikoAuthenticationException(msg)
+netmiko.ssh_exception.NetmikoAuthenticationException: Authentication to device failed.
+
+Common causes of this problem are:
+1. Invalid username and password
+2. Incorrect SSH-key file
+3. Connecting to the wrong device
+
+Device settings: cisco_ios 172.16.26.160:22
+
+
+Authentication failed.
+
+2022-12-09 22:35:35,294 - nornir.core.task -    ERROR -      start() - Host 'IOS6': task 'netmiko_send_config' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\base_connection.py", line 935, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\paramiko\client.py", line 435, in connect
+    self._auth(
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\paramiko\client.py", line 766, in _auth
+    raise saved_exception
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\paramiko\client.py", line 753, in _auth
+    self._transport.auth_password(username, password)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\paramiko\transport.py", line 1564, in auth_password
+    return self.auth_handler.wait_for_response(my_event)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\paramiko\auth_handler.py", line 259, in wait_for_response
+    raise e
+paramiko.ssh_exception.AuthenticationException: Authentication failed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir_netmiko\tasks\netmiko_send_config.py", line 28, in netmiko_send_config
+    net_connect = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir\core\inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir\core\inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir_netmiko\connections\netmiko.py", line 59, in open
+    connection = ConnectHandler(**parameters)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\ssh_dispatcher.py", line 326, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\cisco\cisco_ios.py", line 17, in __init__
+    return super().__init__(*args, **kwargs)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\base_connection.py", line 350, in __init__
+    self._open()
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\base_connection.py", line 355, in _open
+    self.establish_connection()
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\base_connection.py", line 972, in establish_connection
+    raise NetmikoAuthenticationException(msg)
+netmiko.ssh_exception.NetmikoAuthenticationException: Authentication to device failed.
+
+Common causes of this problem are:
+1. Invalid username and password
+2. Incorrect SSH-key file
+3. Connecting to the wrong device
+
+Device settings: cisco_ios 172.16.26.150:22
+
+
+Authentication failed.
+
+2022-12-09 22:35:35,295 - nornir.core.task -    ERROR -      start() - Host 'IOS4': task 'netmiko_send_config' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\base_connection.py", line 935, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\paramiko\client.py", line 435, in connect
+    self._auth(
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\paramiko\client.py", line 766, in _auth
+    raise saved_exception
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\paramiko\client.py", line 753, in _auth
+    self._transport.auth_password(username, password)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\paramiko\transport.py", line 1564, in auth_password
+    return self.auth_handler.wait_for_response(my_event)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\paramiko\auth_handler.py", line 259, in wait_for_response
+    raise e
+paramiko.ssh_exception.AuthenticationException: Authentication failed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir_netmiko\tasks\netmiko_send_config.py", line 28, in netmiko_send_config
+    net_connect = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir\core\inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir\core\inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir_netmiko\connections\netmiko.py", line 59, in open
+    connection = ConnectHandler(**parameters)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\ssh_dispatcher.py", line 326, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\cisco\cisco_ios.py", line 17, in __init__
+    return super().__init__(*args, **kwargs)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\base_connection.py", line 350, in __init__
+    self._open()
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\base_connection.py", line 355, in _open
+    self.establish_connection()
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\base_connection.py", line 972, in establish_connection
+    raise NetmikoAuthenticationException(msg)
+netmiko.ssh_exception.NetmikoAuthenticationException: Authentication to device failed.
+
+Common causes of this problem are:
+1. Invalid username and password
+2. Incorrect SSH-key file
+3. Connecting to the wrong device
+
+Device settings: cisco_ios 172.16.26.166:22
+
+
+Authentication failed.
+
+2022-12-09 22:35:35,296 - nornir.core.task -    ERROR -      start() - Host 'IOS5': task 'netmiko_send_config' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\base_connection.py", line 935, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\paramiko\client.py", line 435, in connect
+    self._auth(
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\paramiko\client.py", line 766, in _auth
+    raise saved_exception
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\paramiko\client.py", line 753, in _auth
+    self._transport.auth_password(username, password)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\paramiko\transport.py", line 1564, in auth_password
+    return self.auth_handler.wait_for_response(my_event)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\paramiko\auth_handler.py", line 259, in wait_for_response
+    raise e
+paramiko.ssh_exception.AuthenticationException: Authentication failed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir_netmiko\tasks\netmiko_send_config.py", line 28, in netmiko_send_config
+    net_connect = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir\core\inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir\core\inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir_netmiko\connections\netmiko.py", line 59, in open
+    connection = ConnectHandler(**parameters)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\ssh_dispatcher.py", line 326, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\cisco\cisco_ios.py", line 17, in __init__
+    return super().__init__(*args, **kwargs)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\base_connection.py", line 350, in __init__
+    self._open()
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\base_connection.py", line 355, in _open
+    self.establish_connection()
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\base_connection.py", line 972, in establish_connection
+    raise NetmikoAuthenticationException(msg)
+netmiko.ssh_exception.NetmikoAuthenticationException: Authentication to device failed.
+
+Common causes of this problem are:
+1. Invalid username and password
+2. Incorrect SSH-key file
+3. Connecting to the wrong device
+
+Device settings: cisco_ios 172.16.26.143:22
+
+
+Authentication failed.
+
+2022-12-09 22:35:35,301 -  nornir.core -     INFO -        run() - Running task 'netmiko_file_transfer' with args {'source_file': 'nornir_global.log', 'dest_file': 'nornir_global.log'} on 6 hosts
+2022-12-09 22:36:10,924 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_config' with args {'config_commands': ['ip scp server enable', 'router ospf 100']} on 6 hosts
+2022-12-09 22:36:13,885 - nornir.core.task -    ERROR -      start() - Host 'IOS5': task 'netmiko_send_config' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\base_connection.py", line 935, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\paramiko\client.py", line 435, in connect
+    self._auth(
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\paramiko\client.py", line 766, in _auth
+    raise saved_exception
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\paramiko\client.py", line 753, in _auth
+    self._transport.auth_password(username, password)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\paramiko\transport.py", line 1564, in auth_password
+    return self.auth_handler.wait_for_response(my_event)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\paramiko\auth_handler.py", line 259, in wait_for_response
+    raise e
+paramiko.ssh_exception.AuthenticationException: Authentication failed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir_netmiko\tasks\netmiko_send_config.py", line 28, in netmiko_send_config
+    net_connect = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir\core\inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir\core\inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir_netmiko\connections\netmiko.py", line 59, in open
+    connection = ConnectHandler(**parameters)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\ssh_dispatcher.py", line 326, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\cisco\cisco_ios.py", line 17, in __init__
+    return super().__init__(*args, **kwargs)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\base_connection.py", line 350, in __init__
+    self._open()
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\base_connection.py", line 355, in _open
+    self.establish_connection()
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\base_connection.py", line 972, in establish_connection
+    raise NetmikoAuthenticationException(msg)
+netmiko.ssh_exception.NetmikoAuthenticationException: Authentication to device failed.
+
+Common causes of this problem are:
+1. Invalid username and password
+2. Incorrect SSH-key file
+3. Connecting to the wrong device
+
+Device settings: cisco_ios 172.16.26.143:22
+
+
+Authentication failed.
+
+2022-12-09 22:36:13,886 - nornir.core.task -    ERROR -      start() - Host 'IOS6': task 'netmiko_send_config' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\base_connection.py", line 935, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\paramiko\client.py", line 435, in connect
+    self._auth(
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\paramiko\client.py", line 766, in _auth
+    raise saved_exception
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\paramiko\client.py", line 753, in _auth
+    self._transport.auth_password(username, password)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\paramiko\transport.py", line 1564, in auth_password
+    return self.auth_handler.wait_for_response(my_event)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\paramiko\auth_handler.py", line 259, in wait_for_response
+    raise e
+paramiko.ssh_exception.AuthenticationException: Authentication failed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir_netmiko\tasks\netmiko_send_config.py", line 28, in netmiko_send_config
+    net_connect = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir\core\inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir\core\inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir_netmiko\connections\netmiko.py", line 59, in open
+    connection = ConnectHandler(**parameters)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\ssh_dispatcher.py", line 326, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\cisco\cisco_ios.py", line 17, in __init__
+    return super().__init__(*args, **kwargs)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\base_connection.py", line 350, in __init__
+    self._open()
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\base_connection.py", line 355, in _open
+    self.establish_connection()
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\base_connection.py", line 972, in establish_connection
+    raise NetmikoAuthenticationException(msg)
+netmiko.ssh_exception.NetmikoAuthenticationException: Authentication to device failed.
+
+Common causes of this problem are:
+1. Invalid username and password
+2. Incorrect SSH-key file
+3. Connecting to the wrong device
+
+Device settings: cisco_ios 172.16.26.150:22
+
+
+Authentication failed.
+
+2022-12-09 22:36:13,886 - nornir.core.task -    ERROR -      start() - Host 'IOS4': task 'netmiko_send_config' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\base_connection.py", line 935, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\paramiko\client.py", line 435, in connect
+    self._auth(
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\paramiko\client.py", line 766, in _auth
+    raise saved_exception
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\paramiko\client.py", line 753, in _auth
+    self._transport.auth_password(username, password)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\paramiko\transport.py", line 1564, in auth_password
+    return self.auth_handler.wait_for_response(my_event)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\paramiko\auth_handler.py", line 259, in wait_for_response
+    raise e
+paramiko.ssh_exception.AuthenticationException: Authentication failed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir_netmiko\tasks\netmiko_send_config.py", line 28, in netmiko_send_config
+    net_connect = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir\core\inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir\core\inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir_netmiko\connections\netmiko.py", line 59, in open
+    connection = ConnectHandler(**parameters)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\ssh_dispatcher.py", line 326, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\cisco\cisco_ios.py", line 17, in __init__
+    return super().__init__(*args, **kwargs)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\base_connection.py", line 350, in __init__
+    self._open()
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\base_connection.py", line 355, in _open
+    self.establish_connection()
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\base_connection.py", line 972, in establish_connection
+    raise NetmikoAuthenticationException(msg)
+netmiko.ssh_exception.NetmikoAuthenticationException: Authentication to device failed.
+
+Common causes of this problem are:
+1. Invalid username and password
+2. Incorrect SSH-key file
+3. Connecting to the wrong device
+
+Device settings: cisco_ios 172.16.26.166:22
+
+
+Authentication failed.
+
+2022-12-09 22:36:13,887 - nornir.core.task -    ERROR -      start() - Host 'IOS1': task 'netmiko_send_config' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\base_connection.py", line 935, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\paramiko\client.py", line 435, in connect
+    self._auth(
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\paramiko\client.py", line 766, in _auth
+    raise saved_exception
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\paramiko\client.py", line 753, in _auth
+    self._transport.auth_password(username, password)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\paramiko\transport.py", line 1564, in auth_password
+    return self.auth_handler.wait_for_response(my_event)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\paramiko\auth_handler.py", line 259, in wait_for_response
+    raise e
+paramiko.ssh_exception.AuthenticationException: Authentication failed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir_netmiko\tasks\netmiko_send_config.py", line 28, in netmiko_send_config
+    net_connect = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir\core\inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir\core\inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir_netmiko\connections\netmiko.py", line 59, in open
+    connection = ConnectHandler(**parameters)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\ssh_dispatcher.py", line 326, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\cisco\cisco_ios.py", line 17, in __init__
+    return super().__init__(*args, **kwargs)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\base_connection.py", line 350, in __init__
+    self._open()
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\base_connection.py", line 355, in _open
+    self.establish_connection()
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\base_connection.py", line 972, in establish_connection
+    raise NetmikoAuthenticationException(msg)
+netmiko.ssh_exception.NetmikoAuthenticationException: Authentication to device failed.
+
+Common causes of this problem are:
+1. Invalid username and password
+2. Incorrect SSH-key file
+3. Connecting to the wrong device
+
+Device settings: cisco_ios 172.16.26.160:22
+
+
+Authentication failed.
+
+2022-12-09 22:36:13,891 -  nornir.core -     INFO -        run() - Running task 'netmiko_file_transfer' with args {'source_file': 'nornir_global.log', 'dest_file': 'nornir_global.log'} on 6 hosts
+2022-12-09 22:36:44,268 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_config' with args {'config_commands': ['ip scp server enable', 'router ospf 100']} on 6 hosts
+2022-12-09 22:36:47,044 - nornir.core.task -    ERROR -      start() - Host 'IOS6': task 'netmiko_send_config' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\base_connection.py", line 935, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\paramiko\client.py", line 435, in connect
+    self._auth(
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\paramiko\client.py", line 766, in _auth
+    raise saved_exception
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\paramiko\client.py", line 753, in _auth
+    self._transport.auth_password(username, password)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\paramiko\transport.py", line 1564, in auth_password
+    return self.auth_handler.wait_for_response(my_event)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\paramiko\auth_handler.py", line 259, in wait_for_response
+    raise e
+paramiko.ssh_exception.AuthenticationException: Authentication failed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir_netmiko\tasks\netmiko_send_config.py", line 28, in netmiko_send_config
+    net_connect = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir\core\inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir\core\inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir_netmiko\connections\netmiko.py", line 59, in open
+    connection = ConnectHandler(**parameters)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\ssh_dispatcher.py", line 326, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\cisco\cisco_ios.py", line 17, in __init__
+    return super().__init__(*args, **kwargs)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\base_connection.py", line 350, in __init__
+    self._open()
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\base_connection.py", line 355, in _open
+    self.establish_connection()
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\base_connection.py", line 972, in establish_connection
+    raise NetmikoAuthenticationException(msg)
+netmiko.ssh_exception.NetmikoAuthenticationException: Authentication to device failed.
+
+Common causes of this problem are:
+1. Invalid username and password
+2. Incorrect SSH-key file
+3. Connecting to the wrong device
+
+Device settings: cisco_ios 172.16.26.150:22
+
+
+Authentication failed.
+
+2022-12-09 22:36:47,045 - nornir.core.task -    ERROR -      start() - Host 'IOS4': task 'netmiko_send_config' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\base_connection.py", line 935, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\paramiko\client.py", line 435, in connect
+    self._auth(
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\paramiko\client.py", line 766, in _auth
+    raise saved_exception
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\paramiko\client.py", line 753, in _auth
+    self._transport.auth_password(username, password)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\paramiko\transport.py", line 1564, in auth_password
+    return self.auth_handler.wait_for_response(my_event)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\paramiko\auth_handler.py", line 259, in wait_for_response
+    raise e
+paramiko.ssh_exception.AuthenticationException: Authentication failed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir_netmiko\tasks\netmiko_send_config.py", line 28, in netmiko_send_config
+    net_connect = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir\core\inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir\core\inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir_netmiko\connections\netmiko.py", line 59, in open
+    connection = ConnectHandler(**parameters)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\ssh_dispatcher.py", line 326, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\cisco\cisco_ios.py", line 17, in __init__
+    return super().__init__(*args, **kwargs)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\base_connection.py", line 350, in __init__
+    self._open()
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\base_connection.py", line 355, in _open
+    self.establish_connection()
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\base_connection.py", line 972, in establish_connection
+    raise NetmikoAuthenticationException(msg)
+netmiko.ssh_exception.NetmikoAuthenticationException: Authentication to device failed.
+
+Common causes of this problem are:
+1. Invalid username and password
+2. Incorrect SSH-key file
+3. Connecting to the wrong device
+
+Device settings: cisco_ios 172.16.26.166:22
+
+
+Authentication failed.
+
+2022-12-09 22:36:47,046 - nornir.core.task -    ERROR -      start() - Host 'IOS5': task 'netmiko_send_config' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\base_connection.py", line 935, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\paramiko\client.py", line 435, in connect
+    self._auth(
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\paramiko\client.py", line 766, in _auth
+    raise saved_exception
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\paramiko\client.py", line 753, in _auth
+    self._transport.auth_password(username, password)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\paramiko\transport.py", line 1564, in auth_password
+    return self.auth_handler.wait_for_response(my_event)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\paramiko\auth_handler.py", line 259, in wait_for_response
+    raise e
+paramiko.ssh_exception.AuthenticationException: Authentication failed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir_netmiko\tasks\netmiko_send_config.py", line 28, in netmiko_send_config
+    net_connect = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir\core\inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir\core\inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir_netmiko\connections\netmiko.py", line 59, in open
+    connection = ConnectHandler(**parameters)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\ssh_dispatcher.py", line 326, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\cisco\cisco_ios.py", line 17, in __init__
+    return super().__init__(*args, **kwargs)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\base_connection.py", line 350, in __init__
+    self._open()
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\base_connection.py", line 355, in _open
+    self.establish_connection()
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\base_connection.py", line 972, in establish_connection
+    raise NetmikoAuthenticationException(msg)
+netmiko.ssh_exception.NetmikoAuthenticationException: Authentication to device failed.
+
+Common causes of this problem are:
+1. Invalid username and password
+2. Incorrect SSH-key file
+3. Connecting to the wrong device
+
+Device settings: cisco_ios 172.16.26.143:22
+
+
+Authentication failed.
+
+2022-12-09 22:36:47,248 - nornir.core.task -    ERROR -      start() - Host 'IOS1': task 'netmiko_send_config' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\base_connection.py", line 935, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\paramiko\client.py", line 435, in connect
+    self._auth(
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\paramiko\client.py", line 766, in _auth
+    raise saved_exception
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\paramiko\client.py", line 753, in _auth
+    self._transport.auth_password(username, password)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\paramiko\transport.py", line 1564, in auth_password
+    return self.auth_handler.wait_for_response(my_event)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\paramiko\auth_handler.py", line 259, in wait_for_response
+    raise e
+paramiko.ssh_exception.AuthenticationException: Authentication failed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir_netmiko\tasks\netmiko_send_config.py", line 28, in netmiko_send_config
+    net_connect = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir\core\inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir\core\inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir_netmiko\connections\netmiko.py", line 59, in open
+    connection = ConnectHandler(**parameters)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\ssh_dispatcher.py", line 326, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\cisco\cisco_ios.py", line 17, in __init__
+    return super().__init__(*args, **kwargs)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\base_connection.py", line 350, in __init__
+    self._open()
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\base_connection.py", line 355, in _open
+    self.establish_connection()
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\base_connection.py", line 972, in establish_connection
+    raise NetmikoAuthenticationException(msg)
+netmiko.ssh_exception.NetmikoAuthenticationException: Authentication to device failed.
+
+Common causes of this problem are:
+1. Invalid username and password
+2. Incorrect SSH-key file
+3. Connecting to the wrong device
+
+Device settings: cisco_ios 172.16.26.160:22
+
+
+Authentication failed.
+
+2022-12-09 22:36:47,250 -  nornir.core -     INFO -        run() - Running task 'netmiko_file_transfer' with args {'source_file': 'nornir_global.log', 'dest_file': 'nornir_global.log'} on 6 hosts
+2022-12-09 22:37:13,544 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_config' with args {'config_commands': ['ip scp server enable', 'router ospf 100']} on 6 hosts
+2022-12-09 22:37:16,292 - nornir.core.task -    ERROR -      start() - Host 'IOS1': task 'netmiko_send_config' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\base_connection.py", line 935, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\paramiko\client.py", line 435, in connect
+    self._auth(
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\paramiko\client.py", line 766, in _auth
+    raise saved_exception
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\paramiko\client.py", line 753, in _auth
+    self._transport.auth_password(username, password)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\paramiko\transport.py", line 1564, in auth_password
+    return self.auth_handler.wait_for_response(my_event)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\paramiko\auth_handler.py", line 259, in wait_for_response
+    raise e
+paramiko.ssh_exception.AuthenticationException: Authentication failed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir_netmiko\tasks\netmiko_send_config.py", line 28, in netmiko_send_config
+    net_connect = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir\core\inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir\core\inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir_netmiko\connections\netmiko.py", line 59, in open
+    connection = ConnectHandler(**parameters)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\ssh_dispatcher.py", line 326, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\cisco\cisco_ios.py", line 17, in __init__
+    return super().__init__(*args, **kwargs)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\base_connection.py", line 350, in __init__
+    self._open()
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\base_connection.py", line 355, in _open
+    self.establish_connection()
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\base_connection.py", line 972, in establish_connection
+    raise NetmikoAuthenticationException(msg)
+netmiko.ssh_exception.NetmikoAuthenticationException: Authentication to device failed.
+
+Common causes of this problem are:
+1. Invalid username and password
+2. Incorrect SSH-key file
+3. Connecting to the wrong device
+
+Device settings: cisco_ios 172.16.26.160:22
+
+
+Authentication failed.
+
+2022-12-09 22:37:16,305 - nornir.core.task -    ERROR -      start() - Host 'IOS4': task 'netmiko_send_config' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\base_connection.py", line 935, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\paramiko\client.py", line 435, in connect
+    self._auth(
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\paramiko\client.py", line 766, in _auth
+    raise saved_exception
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\paramiko\client.py", line 753, in _auth
+    self._transport.auth_password(username, password)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\paramiko\transport.py", line 1564, in auth_password
+    return self.auth_handler.wait_for_response(my_event)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\paramiko\auth_handler.py", line 259, in wait_for_response
+    raise e
+paramiko.ssh_exception.AuthenticationException: Authentication failed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir_netmiko\tasks\netmiko_send_config.py", line 28, in netmiko_send_config
+    net_connect = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir\core\inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir\core\inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir_netmiko\connections\netmiko.py", line 59, in open
+    connection = ConnectHandler(**parameters)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\ssh_dispatcher.py", line 326, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\cisco\cisco_ios.py", line 17, in __init__
+    return super().__init__(*args, **kwargs)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\base_connection.py", line 350, in __init__
+    self._open()
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\base_connection.py", line 355, in _open
+    self.establish_connection()
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\base_connection.py", line 972, in establish_connection
+    raise NetmikoAuthenticationException(msg)
+netmiko.ssh_exception.NetmikoAuthenticationException: Authentication to device failed.
+
+Common causes of this problem are:
+1. Invalid username and password
+2. Incorrect SSH-key file
+3. Connecting to the wrong device
+
+Device settings: cisco_ios 172.16.26.166:22
+
+
+Authentication failed.
+
+2022-12-09 22:37:16,306 - nornir.core.task -    ERROR -      start() - Host 'IOS5': task 'netmiko_send_config' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\base_connection.py", line 935, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\paramiko\client.py", line 435, in connect
+    self._auth(
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\paramiko\client.py", line 766, in _auth
+    raise saved_exception
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\paramiko\client.py", line 753, in _auth
+    self._transport.auth_password(username, password)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\paramiko\transport.py", line 1564, in auth_password
+    return self.auth_handler.wait_for_response(my_event)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\paramiko\auth_handler.py", line 259, in wait_for_response
+    raise e
+paramiko.ssh_exception.AuthenticationException: Authentication failed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir_netmiko\tasks\netmiko_send_config.py", line 28, in netmiko_send_config
+    net_connect = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir\core\inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir\core\inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir_netmiko\connections\netmiko.py", line 59, in open
+    connection = ConnectHandler(**parameters)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\ssh_dispatcher.py", line 326, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\cisco\cisco_ios.py", line 17, in __init__
+    return super().__init__(*args, **kwargs)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\base_connection.py", line 350, in __init__
+    self._open()
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\base_connection.py", line 355, in _open
+    self.establish_connection()
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\base_connection.py", line 972, in establish_connection
+    raise NetmikoAuthenticationException(msg)
+netmiko.ssh_exception.NetmikoAuthenticationException: Authentication to device failed.
+
+Common causes of this problem are:
+1. Invalid username and password
+2. Incorrect SSH-key file
+3. Connecting to the wrong device
+
+Device settings: cisco_ios 172.16.26.143:22
+
+
+Authentication failed.
+
+2022-12-09 22:37:16,307 - nornir.core.task -    ERROR -      start() - Host 'IOS6': task 'netmiko_send_config' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\base_connection.py", line 935, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\paramiko\client.py", line 435, in connect
+    self._auth(
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\paramiko\client.py", line 766, in _auth
+    raise saved_exception
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\paramiko\client.py", line 753, in _auth
+    self._transport.auth_password(username, password)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\paramiko\transport.py", line 1564, in auth_password
+    return self.auth_handler.wait_for_response(my_event)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\paramiko\auth_handler.py", line 259, in wait_for_response
+    raise e
+paramiko.ssh_exception.AuthenticationException: Authentication failed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir_netmiko\tasks\netmiko_send_config.py", line 28, in netmiko_send_config
+    net_connect = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir\core\inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir\core\inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir_netmiko\connections\netmiko.py", line 59, in open
+    connection = ConnectHandler(**parameters)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\ssh_dispatcher.py", line 326, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\cisco\cisco_ios.py", line 17, in __init__
+    return super().__init__(*args, **kwargs)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\base_connection.py", line 350, in __init__
+    self._open()
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\base_connection.py", line 355, in _open
+    self.establish_connection()
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\base_connection.py", line 972, in establish_connection
+    raise NetmikoAuthenticationException(msg)
+netmiko.ssh_exception.NetmikoAuthenticationException: Authentication to device failed.
+
+Common causes of this problem are:
+1. Invalid username and password
+2. Incorrect SSH-key file
+3. Connecting to the wrong device
+
+Device settings: cisco_ios 172.16.26.150:22
+
+
+Authentication failed.
+
+2022-12-09 22:37:16,309 -  nornir.core -     INFO -        run() - Running task 'netmiko_file_transfer' with args {'source_file': 'nornir_global.log', 'dest_file': 'nornir_global.log'} on 6 hosts
+2022-12-09 22:37:36,756 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_config' with args {'config_commands': ['ip scp server enable', 'router ospf 100']} on 6 hosts
+2022-12-09 22:37:39,801 - nornir.core.task -    ERROR -      start() - Host 'IOS1': task 'netmiko_send_config' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\base_connection.py", line 935, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\paramiko\client.py", line 435, in connect
+    self._auth(
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\paramiko\client.py", line 766, in _auth
+    raise saved_exception
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\paramiko\client.py", line 753, in _auth
+    self._transport.auth_password(username, password)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\paramiko\transport.py", line 1564, in auth_password
+    return self.auth_handler.wait_for_response(my_event)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\paramiko\auth_handler.py", line 259, in wait_for_response
+    raise e
+paramiko.ssh_exception.AuthenticationException: Authentication failed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir_netmiko\tasks\netmiko_send_config.py", line 28, in netmiko_send_config
+    net_connect = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir\core\inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir\core\inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir_netmiko\connections\netmiko.py", line 59, in open
+    connection = ConnectHandler(**parameters)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\ssh_dispatcher.py", line 326, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\cisco\cisco_ios.py", line 17, in __init__
+    return super().__init__(*args, **kwargs)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\base_connection.py", line 350, in __init__
+    self._open()
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\base_connection.py", line 355, in _open
+    self.establish_connection()
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\base_connection.py", line 972, in establish_connection
+    raise NetmikoAuthenticationException(msg)
+netmiko.ssh_exception.NetmikoAuthenticationException: Authentication to device failed.
+
+Common causes of this problem are:
+1. Invalid username and password
+2. Incorrect SSH-key file
+3. Connecting to the wrong device
+
+Device settings: cisco_ios 172.16.26.160:22
+
+
+Authentication failed.
+
+2022-12-09 22:37:39,816 - nornir.core.task -    ERROR -      start() - Host 'IOS4': task 'netmiko_send_config' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\base_connection.py", line 935, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\paramiko\client.py", line 435, in connect
+    self._auth(
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\paramiko\client.py", line 766, in _auth
+    raise saved_exception
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\paramiko\client.py", line 753, in _auth
+    self._transport.auth_password(username, password)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\paramiko\transport.py", line 1564, in auth_password
+    return self.auth_handler.wait_for_response(my_event)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\paramiko\auth_handler.py", line 259, in wait_for_response
+    raise e
+paramiko.ssh_exception.AuthenticationException: Authentication failed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir_netmiko\tasks\netmiko_send_config.py", line 28, in netmiko_send_config
+    net_connect = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir\core\inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir\core\inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir_netmiko\connections\netmiko.py", line 59, in open
+    connection = ConnectHandler(**parameters)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\ssh_dispatcher.py", line 326, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\cisco\cisco_ios.py", line 17, in __init__
+    return super().__init__(*args, **kwargs)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\base_connection.py", line 350, in __init__
+    self._open()
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\base_connection.py", line 355, in _open
+    self.establish_connection()
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\base_connection.py", line 972, in establish_connection
+    raise NetmikoAuthenticationException(msg)
+netmiko.ssh_exception.NetmikoAuthenticationException: Authentication to device failed.
+
+Common causes of this problem are:
+1. Invalid username and password
+2. Incorrect SSH-key file
+3. Connecting to the wrong device
+
+Device settings: cisco_ios 172.16.26.166:22
+
+
+Authentication failed.
+
+2022-12-09 22:37:39,823 - nornir.core.task -    ERROR -      start() - Host 'IOS6': task 'netmiko_send_config' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\base_connection.py", line 935, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\paramiko\client.py", line 435, in connect
+    self._auth(
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\paramiko\client.py", line 766, in _auth
+    raise saved_exception
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\paramiko\client.py", line 753, in _auth
+    self._transport.auth_password(username, password)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\paramiko\transport.py", line 1564, in auth_password
+    return self.auth_handler.wait_for_response(my_event)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\paramiko\auth_handler.py", line 259, in wait_for_response
+    raise e
+paramiko.ssh_exception.AuthenticationException: Authentication failed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir_netmiko\tasks\netmiko_send_config.py", line 28, in netmiko_send_config
+    net_connect = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir\core\inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir\core\inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir_netmiko\connections\netmiko.py", line 59, in open
+    connection = ConnectHandler(**parameters)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\ssh_dispatcher.py", line 326, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\cisco\cisco_ios.py", line 17, in __init__
+    return super().__init__(*args, **kwargs)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\base_connection.py", line 350, in __init__
+    self._open()
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\base_connection.py", line 355, in _open
+    self.establish_connection()
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\base_connection.py", line 972, in establish_connection
+    raise NetmikoAuthenticationException(msg)
+netmiko.ssh_exception.NetmikoAuthenticationException: Authentication to device failed.
+
+Common causes of this problem are:
+1. Invalid username and password
+2. Incorrect SSH-key file
+3. Connecting to the wrong device
+
+Device settings: cisco_ios 172.16.26.150:22
+
+
+Authentication failed.
+
+2022-12-09 22:37:39,852 - nornir.core.task -    ERROR -      start() - Host 'IOS5': task 'netmiko_send_config' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\base_connection.py", line 935, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\paramiko\client.py", line 435, in connect
+    self._auth(
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\paramiko\client.py", line 766, in _auth
+    raise saved_exception
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\paramiko\client.py", line 753, in _auth
+    self._transport.auth_password(username, password)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\paramiko\transport.py", line 1564, in auth_password
+    return self.auth_handler.wait_for_response(my_event)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\paramiko\auth_handler.py", line 259, in wait_for_response
+    raise e
+paramiko.ssh_exception.AuthenticationException: Authentication failed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir_netmiko\tasks\netmiko_send_config.py", line 28, in netmiko_send_config
+    net_connect = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir\core\inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir\core\inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir_netmiko\connections\netmiko.py", line 59, in open
+    connection = ConnectHandler(**parameters)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\ssh_dispatcher.py", line 326, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\cisco\cisco_ios.py", line 17, in __init__
+    return super().__init__(*args, **kwargs)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\base_connection.py", line 350, in __init__
+    self._open()
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\base_connection.py", line 355, in _open
+    self.establish_connection()
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\base_connection.py", line 972, in establish_connection
+    raise NetmikoAuthenticationException(msg)
+netmiko.ssh_exception.NetmikoAuthenticationException: Authentication to device failed.
+
+Common causes of this problem are:
+1. Invalid username and password
+2. Incorrect SSH-key file
+3. Connecting to the wrong device
+
+Device settings: cisco_ios 172.16.26.143:22
+
+
+Authentication failed.
+
+2022-12-09 22:37:39,853 -  nornir.core -     INFO -        run() - Running task 'netmiko_file_transfer' with args {'source_file': 'nornir_global.log', 'dest_file': 'nornir_global.log'} on 6 hosts
+2022-12-09 22:37:46,580 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_config' with args {'config_commands': ['ip scp server enable', 'router ospf 100']} on 6 hosts
+2022-12-09 22:37:48,276 -  nornir.core -     INFO -        run() - Running task 'netmiko_file_transfer' with args {'source_file': 'nornir_global.log', 'dest_file': 'nornir_global.log'} on 6 hosts
+2022-12-09 22:38:03,916 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_config' with args {'config_commands': ['ip scp server enable', 'router ospf 100']} on 6 hosts
+2022-12-09 22:38:05,434 -  nornir.core -     INFO -        run() - Running task 'netmiko_file_transfer' with args {'source_file': 'nornir_global.log', 'dest_file': 'nornir_global.log'} on 6 hosts
+2022-12-09 22:39:22,087 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_config' with args {'config_commands': ['ip scp server enable', 'router ospf 100']} on 6 hosts
+2022-12-09 22:39:24,012 -  nornir.core -     INFO -        run() - Running task 'netmiko_file_transfer' with args {'source_file': 'nornir_global.log', 'dest_file': 'nornir_global.log'} on 6 hosts
+2022-12-09 22:40:18,200 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_config' with args {'config_commands': ['ip scp server enable', 'router ospf 100']} on 6 hosts
+2022-12-09 22:40:20,191 -  nornir.core -     INFO -        run() - Running task 'netmiko_file_transfer' with args {'source_file': 'nornir_global.log', 'dest_file': 'nornir_global.log'} on 6 hosts
+2022-12-09 22:55:26,699 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_config' with args {'config_file': 'C:\\Users\\sagar\\Music\\nornir config push.txt'} on 6 hosts
+2022-12-09 22:55:47,210 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_config' with args {'config_file': 'C:\\Users\\sagar\\Music\\nornir config push.txt'} on 6 hosts
+2022-12-09 22:56:06,711 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_config' with args {'config_file': 'C:\\Users\\sagar\\Music\\nornir config push.txt'} on 6 hosts
+2023-01-15 10:02:52,159 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show ip int br'} on 2 hosts
+2023-01-15 10:02:54,971 - nornir.core.task -    ERROR -      start() - Host 'IOS2': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\base_connection.py", line 935, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\paramiko\client.py", line 435, in connect
+    self._auth(
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\paramiko\client.py", line 766, in _auth
+    raise saved_exception
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\paramiko\client.py", line 753, in _auth
+    self._transport.auth_password(username, password)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\paramiko\transport.py", line 1564, in auth_password
+    return self.auth_handler.wait_for_response(my_event)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\paramiko\auth_handler.py", line 259, in wait_for_response
+    raise e
+paramiko.ssh_exception.AuthenticationException: Authentication failed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir_netmiko\tasks\netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir\core\inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir\core\inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir_netmiko\connections\netmiko.py", line 59, in open
+    connection = ConnectHandler(**parameters)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\ssh_dispatcher.py", line 326, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\cisco\cisco_ios.py", line 17, in __init__
+    return super().__init__(*args, **kwargs)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\base_connection.py", line 350, in __init__
+    self._open()
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\base_connection.py", line 355, in _open
+    self.establish_connection()
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\base_connection.py", line 972, in establish_connection
+    raise NetmikoAuthenticationException(msg)
+netmiko.ssh_exception.NetmikoAuthenticationException: Authentication to device failed.
+
+Common causes of this problem are:
+1. Invalid username and password
+2. Incorrect SSH-key file
+3. Connecting to the wrong device
+
+Device settings: cisco_ios 172.16.26.249:22
+
+
+Authentication failed.
+
+2023-01-15 10:05:13,432 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show ip int br'} on 2 hosts
+2023-01-15 10:05:17,090 - nornir.core.task -    ERROR -      start() - Host 'IOS2': task 'netmiko_send_command' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\base_connection.py", line 935, in establish_connection
+    self.remote_conn_pre.connect(**ssh_connect_params)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\paramiko\client.py", line 435, in connect
+    self._auth(
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\paramiko\client.py", line 766, in _auth
+    raise saved_exception
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\paramiko\client.py", line 753, in _auth
+    self._transport.auth_password(username, password)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\paramiko\transport.py", line 1564, in auth_password
+    return self.auth_handler.wait_for_response(my_event)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\paramiko\auth_handler.py", line 259, in wait_for_response
+    raise e
+paramiko.ssh_exception.AuthenticationException: Authentication failed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir_netmiko\tasks\netmiko_send_command.py", line 26, in netmiko_send_command
+    net_connect = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir\core\inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir\core\inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir_netmiko\connections\netmiko.py", line 59, in open
+    connection = ConnectHandler(**parameters)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\ssh_dispatcher.py", line 326, in ConnectHandler
+    return ConnectionClass(*args, **kwargs)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\cisco\cisco_ios.py", line 17, in __init__
+    return super().__init__(*args, **kwargs)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\base_connection.py", line 350, in __init__
+    self._open()
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\base_connection.py", line 355, in _open
+    self.establish_connection()
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\netmiko\base_connection.py", line 972, in establish_connection
+    raise NetmikoAuthenticationException(msg)
+netmiko.ssh_exception.NetmikoAuthenticationException: Authentication to device failed.
+
+Common causes of this problem are:
+1. Invalid username and password
+2. Incorrect SSH-key file
+3. Connecting to the wrong device
+
+Device settings: cisco_ios 172.16.26.249:22
+
+
+Authentication failed.
+
+2023-01-15 10:05:23,654 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show ip int br'} on 2 hosts
+2023-01-15 10:07:29,165 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_command' with args {'command_string': 'show ip int br'} on 2 hosts
+2023-01-15 10:10:25,330 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_config' with args {'config_commands': ['router ospf 100', 'logging host 5.5.5.5']} on 2 hosts
+2023-01-15 10:14:33,902 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['get_facts', 'get_arp_table']} on 2 hosts
+2023-01-15 10:14:35,656 - nornir.core.task -    ERROR -      start() - Host 'IOS1': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\napalm\ios\ios.py", line 1118, in get_facts
+    _, os_version = line.split("Cisco IOS Software, ")
+ValueError: not enough values to unpack (expected 2, got 1)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir\core\task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\nornir_napalm\plugins\tasks\napalm_get.py", line 44, in napalm_get
+    result[g] = method(**options)
+  File "C:\Users\sagar\PycharmProjects\OCTAUTOMATION2022\venv\lib\site-packages\napalm\ios\ios.py", line 1121, in get_facts
+    _, os_version = re.split(r"Cisco IOS Software \[.*?\], ", line)
+ValueError: not enough values to unpack (expected 2, got 1)
+
+2023-01-15 10:16:44,523 -  nornir.core -     INFO -        run() - Running task 'napalm_cli' with args {'commands': ['show run | i hostname', 'show ip int br']} on 2 hosts
+2023-01-15 10:31:38,230 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_config' with args {'config_file': 'C:\\Users\\sagar\\Music\\nornir config push.txt'} on 3 hosts
+2023-01-15 10:32:26,697 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_config' with args {'config_file': 'C:\\Users\\sagar\\Music\\nornir config push.txt'} on 3 hosts
+2023-01-15 10:32:47,178 -  nornir.core -     INFO -        run() - Running task 'netmiko_send_config' with args {'config_file': 'C:\\Users\\sagar\\Music\\nornir config push.txt'} on 3 hosts

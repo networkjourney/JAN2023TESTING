@@ -1,0 +1,1765 @@
+DEBUG:paramiko.transport:starting thread (client mode): 0xc49b9760
+DEBUG:paramiko.transport:Local version/idstring: SSH-2.0-paramiko_2.11.0
+DEBUG:paramiko.transport:Remote version/idstring: SSH-1.99-Cisco-1.25
+INFO:paramiko.transport:Connected (version 1.99, client Cisco-1.25)
+DEBUG:paramiko.transport:=== Key exchange possibilities ===
+DEBUG:paramiko.transport:kex algos: diffie-hellman-group-exchange-sha1, diffie-hellman-group14-sha1, diffie-hellman-group1-sha1
+DEBUG:paramiko.transport:server key: ssh-rsa
+DEBUG:paramiko.transport:client encrypt: aes128-cbc, 3des-cbc, aes192-cbc, aes256-cbc
+DEBUG:paramiko.transport:server encrypt: aes128-cbc, 3des-cbc, aes192-cbc, aes256-cbc
+DEBUG:paramiko.transport:client mac: hmac-sha1, hmac-sha1-96, hmac-md5, hmac-md5-96
+DEBUG:paramiko.transport:server mac: hmac-sha1, hmac-sha1-96, hmac-md5, hmac-md5-96
+DEBUG:paramiko.transport:client compress: none
+DEBUG:paramiko.transport:server compress: none
+DEBUG:paramiko.transport:client lang: <none>
+DEBUG:paramiko.transport:server lang: <none>
+DEBUG:paramiko.transport:kex follows: False
+DEBUG:paramiko.transport:=== Key exchange agreements ===
+DEBUG:paramiko.transport:Kex: diffie-hellman-group-exchange-sha1
+DEBUG:paramiko.transport:HostKey: ssh-rsa
+DEBUG:paramiko.transport:Cipher: aes128-cbc
+DEBUG:paramiko.transport:MAC: hmac-sha1
+DEBUG:paramiko.transport:Compression: none
+DEBUG:paramiko.transport:=== End of kex handshake ===
+DEBUG:paramiko.transport:Got server p (2048 bits)
+DEBUG:paramiko.transport:kex engine KexGex specified hash_algo <built-in function openssl_sha1>
+DEBUG:paramiko.transport:Switch to new keys ...
+DEBUG:paramiko.transport:Adding ssh-rsa host key for 172.16.26.162: b'8d08b183a87df0abf672f6af23d1fad5'
+DEBUG:paramiko.transport:userauth is OK
+INFO:paramiko.transport:Authentication (password) successful!
+DEBUG:paramiko.transport:[chan 0] Max packet in: 32768 bytes
+DEBUG:paramiko.transport:[chan 0] Max packet out: 4096 bytes
+DEBUG:paramiko.transport:Secsh channel 0 opened.
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:netmiko:write_channel: b'terminal width 511\n'
+DEBUG:netmiko:Pattern is: terminal width 511
+DEBUG:netmiko:_read_channel_expect read_data: 
+R01#
+DEBUG:netmiko:_read_channel_expect read_data: terminal width 511
+
+DEBUG:netmiko:Pattern found: terminal width 511 
+R01#terminal width 511
+
+DEBUG:netmiko:In disable_paging
+DEBUG:netmiko:Command: terminal length 0
+
+DEBUG:netmiko:write_channel: b'terminal length 0\n'
+DEBUG:netmiko:Pattern is: terminal\ length\ 0
+DEBUG:netmiko:_read_channel_expect read_data: R01#t
+DEBUG:netmiko:_read_channel_expect read_data: erminal
+DEBUG:netmiko:_read_channel_expect read_data:  length 0
+R01#
+DEBUG:netmiko:Pattern found: terminal\ length\ 0 R01#terminal length 0
+R01#
+DEBUG:netmiko:R01#terminal length 0
+R01#
+DEBUG:netmiko:Exiting disable_paging
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+R01#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:[find_prompt()]: prompt is R01#
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:Pattern is: #
+DEBUG:netmiko:_read_channel_expect read_data: 
+
+DEBUG:netmiko:_read_channel_expect read_data: R01#
+DEBUG:netmiko:Pattern found: # 
+R01#
+DEBUG:netmiko:write_channel: b'configure terminal\n'
+DEBUG:netmiko:Pattern is: configure\ terminal
+DEBUG:netmiko:_read_channel_expect read_data: c
+DEBUG:netmiko:_read_channel_expect read_data: onfigure term
+DEBUG:netmiko:_read_channel_expect read_data: inal
+Enter configuration commands, one per line.  End with CNTL/Z.
+R01(config)#
+DEBUG:netmiko:Pattern found: configure\ terminal configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+R01(config)#
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:Pattern is: #
+DEBUG:netmiko:_read_channel_expect read_data: 
+
+DEBUG:netmiko:_read_channel_expect read_data: R01(config)#
+DEBUG:netmiko:Pattern found: # 
+R01(config)#
+DEBUG:netmiko:write_channel: b'router ospf 100\n'
+DEBUG:netmiko:Pattern is: router\ ospf\ 100
+DEBUG:netmiko:_read_channel_expect read_data: r
+DEBUG:netmiko:_read_channel_expect read_data: outer ospf 100
+R01(config-router)#
+DEBUG:netmiko:Pattern found: router\ ospf\ 100 router ospf 100
+R01(config-router)#
+DEBUG:netmiko:write_channel: b'network 172.16.26.0 0.0.0.255 area 0\n'
+DEBUG:netmiko:Pattern is: network\ 172\.16\.26\.0\ 0\.0\.0\.255\ area\ 0
+DEBUG:netmiko:_read_channel_expect read_data: n
+DEBUG:netmiko:_read_channel_expect read_data: etw
+DEBUG:netmiko:_read_channel_expect read_data: ork 172.16.26.0 0.0.0.255 area 0
+R01(config-router)#
+DEBUG:netmiko:Pattern found: network\ 172\.16\.26\.0\ 0\.0\.0\.255\ area\ 0 network 172.16.26.0 0.0.0.255 area 0
+R01(config-router)#
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:Pattern is: #
+DEBUG:netmiko:_read_channel_expect read_data: 
+
+DEBUG:netmiko:_read_channel_expect read_data: R01(config-router)#
+DEBUG:netmiko:Pattern found: # 
+R01(config-router)#
+DEBUG:netmiko:write_channel: b'end\n'
+DEBUG:netmiko:Pattern is: end
+DEBUG:netmiko:_read_channel_expect read_data: e
+DEBUG:netmiko:_read_channel_expect read_data: nd
+R01#
+DEBUG:netmiko:Pattern found: end end
+R01#
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:Pattern is: #
+DEBUG:netmiko:_read_channel_expect read_data: 
+
+DEBUG:netmiko:_read_channel_expect read_data: R01#
+DEBUG:netmiko:Pattern found: # 
+R01#
+DEBUG:netmiko:exit_config_mode: end
+R01#
+DEBUG:netmiko:configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+R01(config)#router ospf 100
+R01(config-router)#network 172.16.26.0 0.0.0.255 area 0
+R01(config-router)#end
+R01#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+R01#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:[find_prompt()]: prompt is R01#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'show ip ospf nei gi0/0 det | i up\n'
+DEBUG:netmiko:Pattern is: show\ ip\ ospf\ nei\ gi0/0\ det\ \|\ i\ up
+DEBUG:netmiko:_read_channel_expect read_data: s
+DEBUG:netmiko:_read_channel_expect read_data: how ip ospf nei gi0
+DEBUG:netmiko:_read_channel_expect read_data: /0 det | i up
+                     ^
+% Invalid input detected at '^' marker.
+
+R01#
+DEBUG:netmiko:Pattern found: show\ ip\ ospf\ nei\ gi0/0\ det\ \|\ i\ up show ip ospf nei gi0/0 det | i up
+                     ^
+% Invalid input detected at '^' marker.
+
+R01#
+DEBUG:netmiko:write_channel: b'clear ip ospf process\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: clear ip ospf process
+Reset ALL OSPF processes? [no]: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: Reset ALL OSPF processes? [no]: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+R01#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:[find_prompt()]: prompt is R01#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'yes\n'
+DEBUG:netmiko:Pattern is: yes
+DEBUG:netmiko:_read_channel_expect read_data: y
+DEBUG:netmiko:_read_channel_expect read_data: es
+
+DEBUG:netmiko:Pattern found: yes yes
+
+DEBUG:netmiko:read_channel: Translating "yes"...domain server (172.16.24.1)
+ (172.16.24.1)
+Translating "yes"...domain server (172.16.24.1)
+DEBUG:netmiko:read_channel: 
+
+% Bad IP address or host name
+% Unknown command or computer name, or unable to find computer address
+R01#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+R01#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:[find_prompt()]: prompt is R01#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'show ip ospf nei gi0/0 det | i up\n'
+DEBUG:netmiko:Pattern is: show\ ip\ ospf\ nei\ gi0/0\ det\ \|\ i\ up
+DEBUG:netmiko:_read_channel_expect read_data: s
+DEBUG:netmiko:_read_channel_expect read_data: how ip ospf nei gi
+DEBUG:netmiko:_read_channel_expect read_data: 0/0 det | i up
+
+DEBUG:netmiko:Pattern found: show\ ip\ ospf\ nei\ gi0/0\ det\ \|\ i\ up show ip ospf nei gi0/0 det | i up
+
+DEBUG:netmiko:read_channel:                      ^
+% Invalid input detected at '^' marker.
+
+R01#
+DEBUG:paramiko.transport:starting thread (client mode): 0xc49fcd30
+DEBUG:paramiko.transport:Local version/idstring: SSH-2.0-paramiko_2.11.0
+DEBUG:paramiko.transport:Remote version/idstring: SSH-1.99-Cisco-1.25
+INFO:paramiko.transport:Connected (version 1.99, client Cisco-1.25)
+DEBUG:paramiko.transport:=== Key exchange possibilities ===
+DEBUG:paramiko.transport:kex algos: diffie-hellman-group-exchange-sha1, diffie-hellman-group14-sha1, diffie-hellman-group1-sha1
+DEBUG:paramiko.transport:server key: ssh-rsa
+DEBUG:paramiko.transport:client encrypt: aes128-cbc, 3des-cbc, aes192-cbc, aes256-cbc
+DEBUG:paramiko.transport:server encrypt: aes128-cbc, 3des-cbc, aes192-cbc, aes256-cbc
+DEBUG:paramiko.transport:client mac: hmac-sha1, hmac-sha1-96, hmac-md5, hmac-md5-96
+DEBUG:paramiko.transport:server mac: hmac-sha1, hmac-sha1-96, hmac-md5, hmac-md5-96
+DEBUG:paramiko.transport:client compress: none
+DEBUG:paramiko.transport:server compress: none
+DEBUG:paramiko.transport:client lang: <none>
+DEBUG:paramiko.transport:server lang: <none>
+DEBUG:paramiko.transport:kex follows: False
+DEBUG:paramiko.transport:=== Key exchange agreements ===
+DEBUG:paramiko.transport:Kex: diffie-hellman-group-exchange-sha1
+DEBUG:paramiko.transport:HostKey: ssh-rsa
+DEBUG:paramiko.transport:Cipher: aes128-cbc
+DEBUG:paramiko.transport:MAC: hmac-sha1
+DEBUG:paramiko.transport:Compression: none
+DEBUG:paramiko.transport:=== End of kex handshake ===
+DEBUG:paramiko.transport:Got server p (2048 bits)
+DEBUG:paramiko.transport:kex engine KexGex specified hash_algo <built-in function openssl_sha1>
+DEBUG:paramiko.transport:Switch to new keys ...
+DEBUG:paramiko.transport:Adding ssh-rsa host key for 172.16.26.153: b'96bef839c0e90158b4ebdaa16623406d'
+DEBUG:paramiko.transport:userauth is OK
+INFO:paramiko.transport:Authentication (password) successful!
+DEBUG:paramiko.transport:[chan 0] Max packet in: 32768 bytes
+DEBUG:paramiko.transport:[chan 0] Max packet out: 4096 bytes
+DEBUG:paramiko.transport:Secsh channel 0 opened.
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:netmiko:write_channel: b'terminal width 511\n'
+DEBUG:netmiko:Pattern is: terminal width 511
+DEBUG:netmiko:_read_channel_expect read_data: 
+R02-new#
+DEBUG:netmiko:_read_channel_expect read_data: te
+DEBUG:netmiko:_read_channel_expect read_data: rminal width 511
+R02-new#
+DEBUG:netmiko:Pattern found: terminal width 511 
+R02-new#terminal width 511
+R02-new#
+DEBUG:netmiko:In disable_paging
+DEBUG:netmiko:Command: terminal length 0
+
+DEBUG:netmiko:write_channel: b'terminal length 0\n'
+DEBUG:netmiko:Pattern is: terminal\ length\ 0
+DEBUG:netmiko:_read_channel_expect read_data: t
+DEBUG:netmiko:_read_channel_expect read_data: e
+DEBUG:netmiko:_read_channel_expect read_data: rminal length 0
+R02-new#
+DEBUG:netmiko:Pattern found: terminal\ length\ 0 terminal length 0
+R02-new#
+DEBUG:netmiko:terminal length 0
+R02-new#
+DEBUG:netmiko:Exiting disable_paging
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+R02-new#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:[find_prompt()]: prompt is R02-new#
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:Pattern is: #
+DEBUG:netmiko:_read_channel_expect read_data: 
+
+DEBUG:netmiko:_read_channel_expect read_data: R02-new#
+DEBUG:netmiko:Pattern found: # 
+R02-new#
+DEBUG:netmiko:write_channel: b'configure terminal\n'
+DEBUG:netmiko:Pattern is: configure\ terminal
+DEBUG:netmiko:_read_channel_expect read_data: c
+DEBUG:netmiko:_read_channel_expect read_data: onfigur
+DEBUG:netmiko:_read_channel_expect read_data: e terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+R02-new(config)#
+DEBUG:netmiko:Pattern found: configure\ terminal configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+R02-new(config)#
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:Pattern is: #
+DEBUG:netmiko:_read_channel_expect read_data: 
+
+DEBUG:netmiko:_read_channel_expect read_data: R02-new(config)#
+DEBUG:netmiko:Pattern found: # 
+R02-new(config)#
+DEBUG:netmiko:write_channel: b'router ospf 100\n'
+DEBUG:netmiko:Pattern is: router\ ospf\ 100
+DEBUG:netmiko:_read_channel_expect read_data: r
+DEBUG:netmiko:_read_channel_expect read_data: outer ospf 100
+R02-new(config-router)#
+DEBUG:netmiko:Pattern found: router\ ospf\ 100 router ospf 100
+R02-new(config-router)#
+DEBUG:netmiko:write_channel: b'network 172.16.26.0 0.0.0.255 area 0\n'
+DEBUG:netmiko:Pattern is: network\ 172\.16\.26\.0\ 0\.0\.0\.255\ area\ 0
+DEBUG:netmiko:_read_channel_expect read_data: n
+DEBUG:netmiko:_read_channel_expect read_data: et
+DEBUG:netmiko:_read_channel_expect read_data: work 172.16.26.0 0.0.0.255 area 0
+R02-new(config-router)#
+DEBUG:netmiko:Pattern found: network\ 172\.16\.26\.0\ 0\.0\.0\.255\ area\ 0 network 172.16.26.0 0.0.0.255 area 0
+R02-new(config-router)#
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:Pattern is: #
+DEBUG:netmiko:_read_channel_expect read_data: 
+
+DEBUG:netmiko:_read_channel_expect read_data: R02-new(config-router)#
+DEBUG:netmiko:Pattern found: # 
+R02-new(config-router)#
+DEBUG:netmiko:write_channel: b'end\n'
+DEBUG:netmiko:Pattern is: end
+DEBUG:netmiko:_read_channel_expect read_data: e
+DEBUG:netmiko:_read_channel_expect read_data: nd
+R02-new#
+DEBUG:netmiko:Pattern found: end end
+R02-new#
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:Pattern is: #
+DEBUG:netmiko:_read_channel_expect read_data: 
+
+DEBUG:netmiko:_read_channel_expect read_data: R02-new#
+DEBUG:netmiko:Pattern found: # 
+R02-new#
+DEBUG:netmiko:exit_config_mode: end
+R02-new#
+DEBUG:netmiko:configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+R02-new(config)#router ospf 100
+R02-new(config-router)#network 172.16.26.0 0.0.0.255 area 0
+R02-new(config-router)#end
+R02-new#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+R02-new#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:[find_prompt()]: prompt is R02-new#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'show ip ospf nei gi0/0 det | i up\n'
+DEBUG:netmiko:Pattern is: show\ ip\ ospf\ nei\ gi0/0\ det\ \|\ i\ up
+DEBUG:netmiko:_read_channel_expect read_data: s
+DEBUG:netmiko:_read_channel_expect read_data: how ip ospf nei gi0
+DEBUG:netmiko:_read_channel_expect read_data: /0 det | i up
+                         ^
+% Invalid input detected at '^' marker.
+
+R02-new#
+DEBUG:netmiko:Pattern found: show\ ip\ ospf\ nei\ gi0/0\ det\ \|\ i\ up show ip ospf nei gi0/0 det | i up
+                         ^
+% Invalid input detected at '^' marker.
+
+R02-new#
+DEBUG:netmiko:write_channel: b'clear ip ospf process\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: clear ip ospf process
+Reset ALL OSPF processes? [no]: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: Reset ALL OSPF processes? [no]: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+R02-new#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:[find_prompt()]: prompt is R02-new#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'yes\n'
+DEBUG:netmiko:Pattern is: yes
+DEBUG:netmiko:_read_channel_expect read_data: y
+DEBUG:netmiko:_read_channel_expect read_data: es
+
+DEBUG:netmiko:Pattern found: yes yes
+
+DEBUG:netmiko:read_channel: Translating "yes"...domain server (172.16.24.1)
+ (172.16.24.1)
+Translating "yes"...domain server (172.16.24.1)
+DEBUG:netmiko:read_channel: 
+
+% Bad IP address or host name
+% Unknown command or computer name, or unable to find computer address
+R02-new#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+R02-new#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:[find_prompt()]: prompt is R02-new#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'show ip ospf nei gi0/0 det | i up\n'
+DEBUG:netmiko:Pattern is: show\ ip\ ospf\ nei\ gi0/0\ det\ \|\ i\ up
+DEBUG:netmiko:_read_channel_expect read_data: s
+DEBUG:netmiko:_read_channel_expect read_data: how ip ospf nei g
+DEBUG:netmiko:_read_channel_expect read_data: i0/0 det | i up
+
+DEBUG:netmiko:Pattern found: show\ ip\ ospf\ nei\ gi0/0\ det\ \|\ i\ up show ip ospf nei gi0/0 det | i up
+
+DEBUG:netmiko:read_channel:                          ^
+% Invalid input detected at '^' marker.
+
+R02-new#
+DEBUG:paramiko.transport:starting thread (client mode): 0xc4a14040
+DEBUG:paramiko.transport:Local version/idstring: SSH-2.0-paramiko_2.11.0
+DEBUG:paramiko.transport:Remote version/idstring: SSH-1.99-Cisco-1.25
+INFO:paramiko.transport:Connected (version 1.99, client Cisco-1.25)
+DEBUG:paramiko.transport:=== Key exchange possibilities ===
+DEBUG:paramiko.transport:kex algos: diffie-hellman-group-exchange-sha1, diffie-hellman-group14-sha1, diffie-hellman-group1-sha1
+DEBUG:paramiko.transport:server key: ssh-rsa
+DEBUG:paramiko.transport:client encrypt: aes128-ctr, aes192-ctr, aes256-ctr, aes128-cbc, 3des-cbc, aes192-cbc, aes256-cbc
+DEBUG:paramiko.transport:server encrypt: aes128-ctr, aes192-ctr, aes256-ctr, aes128-cbc, 3des-cbc, aes192-cbc, aes256-cbc
+DEBUG:paramiko.transport:client mac: hmac-sha1, hmac-sha1-96
+DEBUG:paramiko.transport:server mac: hmac-sha1, hmac-sha1-96
+DEBUG:paramiko.transport:client compress: none
+DEBUG:paramiko.transport:server compress: none
+DEBUG:paramiko.transport:client lang: <none>
+DEBUG:paramiko.transport:server lang: <none>
+DEBUG:paramiko.transport:kex follows: False
+DEBUG:paramiko.transport:=== Key exchange agreements ===
+DEBUG:paramiko.transport:Kex: diffie-hellman-group-exchange-sha1
+DEBUG:paramiko.transport:HostKey: ssh-rsa
+DEBUG:paramiko.transport:Cipher: aes128-ctr
+DEBUG:paramiko.transport:MAC: hmac-sha1
+DEBUG:paramiko.transport:Compression: none
+DEBUG:paramiko.transport:=== End of kex handshake ===
+DEBUG:paramiko.transport:Got server p (2048 bits)
+DEBUG:paramiko.transport:kex engine KexGex specified hash_algo <built-in function openssl_sha1>
+DEBUG:paramiko.transport:Switch to new keys ...
+DEBUG:paramiko.transport:Adding ssh-rsa host key for 172.16.26.169: b'20377e1398e54a48df55960b3290fb90'
+DEBUG:paramiko.transport:userauth is OK
+INFO:paramiko.transport:Auth banner: b"\r\n**************************************************************************\r\n* IOSv is strictly limited to use for evaluation, demonstration and IOS  *\r\n* education. IOSv is provided as-is and is not supported by Cisco's      *\r\n* Technical Advisory Center. Any use or disclosure, in whole or in part, *\r\n* of the IOSv Software or Documentation to any third party for any       *\r\n* purposes is expressly prohibited except as otherwise authorized by     *\r\n* Cisco in writing.                                                      *\r\n**************************************************************************"
+INFO:paramiko.transport:Authentication (password) successful!
+DEBUG:paramiko.transport:[chan 0] Max packet in: 32768 bytes
+DEBUG:paramiko.transport:[chan 0] Max packet out: 4096 bytes
+DEBUG:paramiko.transport:Secsh channel 0 opened.
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:netmiko:write_channel: b'terminal width 511\n'
+DEBUG:netmiko:Pattern is: terminal width 511
+DEBUG:netmiko:_read_channel_expect read_data: 
+**************************************************************************
+* IOSv is strictly limited to use for evaluation, demonstration and IOS  *
+* education. IOSv is provided as-is and is not supported by Cisco's      *
+* Technical Advisory Center. Any use or disclosure, in whole or in part, *
+* of the IOSv Software or Documentation to any third party for any       *
+* purposes is expressly prohibited except as otherwise authorized by     *
+* Cisco in writing.                                                      *
+**************************************************************************
+SW08#
+DEBUG:netmiko:_read_channel_expect read_data: t
+DEBUG:netmiko:_read_channel_expect read_data: ermi
+DEBUG:netmiko:_read_channel_expect read_data: nal
+DEBUG:netmiko:_read_channel_expect read_data:  wid
+DEBUG:netmiko:_read_channel_expect read_data: th 5
+DEBUG:netmiko:_read_channel_expect read_data: 11
+SW08#
+DEBUG:netmiko:Pattern found: terminal width 511 
+**************************************************************************
+* IOSv is strictly limited to use for evaluation, demonstration and IOS  *
+* education. IOSv is provided as-is and is not supported by Cisco's      *
+* Technical Advisory Center. Any use or disclosure, in whole or in part, *
+* of the IOSv Software or Documentation to any third party for any       *
+* purposes is expressly prohibited except as otherwise authorized by     *
+* Cisco in writing.                                                      *
+**************************************************************************
+SW08#terminal width 511
+SW08#
+DEBUG:netmiko:In disable_paging
+DEBUG:netmiko:Command: terminal length 0
+
+DEBUG:netmiko:write_channel: b'terminal length 0\n'
+DEBUG:netmiko:Pattern is: terminal\ length\ 0
+DEBUG:netmiko:_read_channel_expect read_data: t
+DEBUG:netmiko:_read_channel_expect read_data: erm
+DEBUG:netmiko:_read_channel_expect read_data: ina
+DEBUG:netmiko:_read_channel_expect read_data: l le
+DEBUG:netmiko:_read_channel_expect read_data: ngth 
+DEBUG:netmiko:_read_channel_expect read_data: 0
+SW08#
+DEBUG:netmiko:Pattern found: terminal\ length\ 0 terminal length 0
+SW08#
+DEBUG:netmiko:terminal length 0
+SW08#
+DEBUG:netmiko:Exiting disable_paging
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+SW08#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:[find_prompt()]: prompt is SW08#
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:Pattern is: #
+DEBUG:netmiko:_read_channel_expect read_data: 
+
+DEBUG:netmiko:_read_channel_expect read_data: SW08#
+DEBUG:netmiko:Pattern found: # 
+SW08#
+DEBUG:netmiko:write_channel: b'configure terminal\n'
+DEBUG:netmiko:Pattern is: configure\ terminal
+DEBUG:netmiko:_read_channel_expect read_data: c
+DEBUG:netmiko:_read_channel_expect read_data: onf
+DEBUG:netmiko:_read_channel_expect read_data: igur
+DEBUG:netmiko:_read_channel_expect read_data: e ter
+DEBUG:netmiko:_read_channel_expect read_data: minal
+DEBUG:netmiko:Pattern found: configure\ terminal configure terminal
+DEBUG:netmiko:Pattern is: SW08
+DEBUG:netmiko:_read_channel_expect read_data: 
+
+DEBUG:netmiko:_read_channel_expect read_data: Enter configuration commands, one per line.  End with CNTL/Z.
+SW08(config)#
+DEBUG:netmiko:Pattern found: SW08 
+Enter configuration commands, one per line.  End with CNTL/Z.
+SW08(config)#
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:Pattern is: #
+DEBUG:netmiko:_read_channel_expect read_data: 
+
+DEBUG:netmiko:_read_channel_expect read_data: SW08(config)#
+DEBUG:netmiko:Pattern found: # 
+SW08(config)#
+DEBUG:netmiko:write_channel: b'router ospf 100\n'
+DEBUG:netmiko:Pattern is: router\ ospf\ 100
+DEBUG:netmiko:_read_channel_expect read_data: r
+DEBUG:netmiko:_read_channel_expect read_data: o
+DEBUG:netmiko:_read_channel_expect read_data: uter 
+DEBUG:netmiko:_read_channel_expect read_data: ospf 
+DEBUG:netmiko:_read_channel_expect read_data: 100
+
+DEBUG:netmiko:Pattern found: router\ ospf\ 100 router ospf 100
+
+DEBUG:netmiko:Pattern is: (?:SW08|#)
+DEBUG:netmiko:_read_channel_expect read_data: SW08(config-router)#
+DEBUG:netmiko:Pattern found: (?:SW08|#) SW08(config-router)#
+DEBUG:netmiko:write_channel: b'network 172.16.26.0 0.0.0.255 area 0\n'
+DEBUG:netmiko:Pattern is: network\ 172\.16\.26\.0\ 0\.0\.0\.255\ area\ 0
+DEBUG:netmiko:_read_channel_expect read_data: n
+DEBUG:netmiko:_read_channel_expect read_data: e
+DEBUG:netmiko:_read_channel_expect read_data: twork 1
+DEBUG:netmiko:_read_channel_expect read_data: 72.16
+DEBUG:netmiko:_read_channel_expect read_data: .26.
+DEBUG:netmiko:_read_channel_expect read_data: 0 0.0
+DEBUG:netmiko:_read_channel_expect read_data: .0.25
+DEBUG:netmiko:_read_channel_expect read_data: 5 ar
+DEBUG:netmiko:_read_channel_expect read_data: ea 0
+
+DEBUG:netmiko:Pattern found: network\ 172\.16\.26\.0\ 0\.0\.0\.255\ area\ 0 network 172.16.26.0 0.0.0.255 area 0
+
+DEBUG:netmiko:Pattern is: (?:SW08|#)
+DEBUG:netmiko:_read_channel_expect read_data: SW08(config-router)#
+DEBUG:netmiko:Pattern found: (?:SW08|#) SW08(config-router)#
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:Pattern is: #
+DEBUG:netmiko:_read_channel_expect read_data: 
+
+DEBUG:netmiko:_read_channel_expect read_data: SW08(config-router)#
+DEBUG:netmiko:Pattern found: # 
+SW08(config-router)#
+DEBUG:netmiko:write_channel: b'end\n'
+DEBUG:netmiko:Pattern is: end
+DEBUG:netmiko:_read_channel_expect read_data: e
+DEBUG:netmiko:_read_channel_expect read_data: n
+DEBUG:netmiko:_read_channel_expect read_data: d
+SW08#
+DEBUG:netmiko:Pattern found: end end
+SW08#
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:Pattern is: #
+DEBUG:netmiko:_read_channel_expect read_data: 
+
+DEBUG:netmiko:_read_channel_expect read_data: SW08#
+DEBUG:netmiko:Pattern found: # 
+SW08#
+DEBUG:netmiko:exit_config_mode: end
+SW08#
+DEBUG:netmiko:configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+SW08(config)#router ospf 100
+SW08(config-router)#network 172.16.26.0 0.0.0.255 area 0
+SW08(config-router)#end
+SW08#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+SW08#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:[find_prompt()]: prompt is SW08#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'show ip ospf nei gi0/0 det | i up\n'
+DEBUG:netmiko:Pattern is: show\ ip\ ospf\ nei\ gi0/0\ det\ \|\ i\ up
+DEBUG:netmiko:_read_channel_expect read_data: s
+DEBUG:netmiko:_read_channel_expect read_data: how
+DEBUG:netmiko:_read_channel_expect read_data:  ip 
+DEBUG:netmiko:_read_channel_expect read_data: ospf
+DEBUG:netmiko:_read_channel_expect read_data:  nei
+DEBUG:netmiko:_read_channel_expect read_data:  gi0
+DEBUG:netmiko:_read_channel_expect read_data: /0 de
+DEBUG:netmiko:_read_channel_expect read_data: t | i
+DEBUG:netmiko:_read_channel_expect read_data:  up
+
+DEBUG:netmiko:Pattern found: show\ ip\ ospf\ nei\ gi0/0\ det\ \|\ i\ up show ip ospf nei gi0/0 det | i up
+
+DEBUG:netmiko:read_channel:     Neighbor is up for 00:05:19
+    Neighbor is up for 00:04:50
+SW08#
+DEBUG:netmiko:write_channel: b'clear ip ospf process\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: clear ip ospf process
+Reset ALL OSPF processes? [no]: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: Reset ALL OSPF processes? [no]: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+SW08#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:[find_prompt()]: prompt is SW08#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'yes\n'
+DEBUG:netmiko:Pattern is: yes
+DEBUG:netmiko:_read_channel_expect read_data: y
+DEBUG:netmiko:_read_channel_expect read_data: es
+DEBUG:netmiko:Pattern found: yes yes
+DEBUG:netmiko:read_channel: 
+Translating "yes"...domain server (172.16.24.1)
+ (172.16.24.1)
+DEBUG:netmiko:read_channel: 
+Translating "yes"...domain server (172.16.24.1)
+% Unknown command or computer name, or unable to find computer address
+SW08#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+SW08#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:[find_prompt()]: prompt is SW08#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'show ip ospf nei gi0/0 det | i up\n'
+DEBUG:netmiko:Pattern is: show\ ip\ ospf\ nei\ gi0/0\ det\ \|\ i\ up
+DEBUG:netmiko:_read_channel_expect read_data: s
+DEBUG:netmiko:_read_channel_expect read_data: h
+DEBUG:netmiko:_read_channel_expect read_data: ow ip
+DEBUG:netmiko:_read_channel_expect read_data:  osp
+DEBUG:netmiko:_read_channel_expect read_data: f n
+DEBUG:netmiko:_read_channel_expect read_data: ei gi
+DEBUG:netmiko:_read_channel_expect read_data: 0/0 d
+DEBUG:netmiko:_read_channel_expect read_data: et |
+DEBUG:netmiko:_read_channel_expect read_data:  i up
+
+DEBUG:netmiko:Pattern found: show\ ip\ ospf\ nei\ gi0/0\ det\ \|\ i\ up show ip ospf nei gi0/0 det | i up
+
+DEBUG:netmiko:read_channel:     Neighbor is up for 00:05:23
+    Neighbor is up for 00:04:54
+SW08#
+DEBUG:paramiko.transport:EOF in transport thread
+DEBUG:paramiko.transport:EOF in transport thread
+DEBUG:paramiko.transport:starting thread (client mode): 0xd98b7790
+DEBUG:paramiko.transport:Local version/idstring: SSH-2.0-paramiko_2.11.0
+DEBUG:paramiko.transport:Remote version/idstring: SSH-1.99-Cisco-1.25
+INFO:paramiko.transport:Connected (version 1.99, client Cisco-1.25)
+DEBUG:paramiko.transport:=== Key exchange possibilities ===
+DEBUG:paramiko.transport:kex algos: diffie-hellman-group-exchange-sha1, diffie-hellman-group14-sha1, diffie-hellman-group1-sha1
+DEBUG:paramiko.transport:server key: ssh-rsa
+DEBUG:paramiko.transport:client encrypt: aes128-cbc, 3des-cbc, aes192-cbc, aes256-cbc
+DEBUG:paramiko.transport:server encrypt: aes128-cbc, 3des-cbc, aes192-cbc, aes256-cbc
+DEBUG:paramiko.transport:client mac: hmac-sha1, hmac-sha1-96, hmac-md5, hmac-md5-96
+DEBUG:paramiko.transport:server mac: hmac-sha1, hmac-sha1-96, hmac-md5, hmac-md5-96
+DEBUG:paramiko.transport:client compress: none
+DEBUG:paramiko.transport:server compress: none
+DEBUG:paramiko.transport:client lang: <none>
+DEBUG:paramiko.transport:server lang: <none>
+DEBUG:paramiko.transport:kex follows: False
+DEBUG:paramiko.transport:=== Key exchange agreements ===
+DEBUG:paramiko.transport:Kex: diffie-hellman-group-exchange-sha1
+DEBUG:paramiko.transport:HostKey: ssh-rsa
+DEBUG:paramiko.transport:Cipher: aes128-cbc
+DEBUG:paramiko.transport:MAC: hmac-sha1
+DEBUG:paramiko.transport:Compression: none
+DEBUG:paramiko.transport:=== End of kex handshake ===
+DEBUG:paramiko.transport:Got server p (2048 bits)
+DEBUG:paramiko.transport:kex engine KexGex specified hash_algo <built-in function openssl_sha1>
+DEBUG:paramiko.transport:Switch to new keys ...
+DEBUG:paramiko.transport:Adding ssh-rsa host key for 172.16.26.162: b'8d08b183a87df0abf672f6af23d1fad5'
+DEBUG:paramiko.transport:userauth is OK
+INFO:paramiko.transport:Authentication (password) successful!
+DEBUG:paramiko.transport:[chan 0] Max packet in: 32768 bytes
+DEBUG:paramiko.transport:[chan 0] Max packet out: 4096 bytes
+DEBUG:paramiko.transport:Secsh channel 0 opened.
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:netmiko:write_channel: b'terminal width 511\n'
+DEBUG:netmiko:Pattern is: terminal width 511
+DEBUG:netmiko:_read_channel_expect read_data: 
+R01#
+DEBUG:netmiko:_read_channel_expect read_data: t
+DEBUG:netmiko:_read_channel_expect read_data: erminal width 511
+R01#
+DEBUG:netmiko:Pattern found: terminal width 511 
+R01#terminal width 511
+R01#
+DEBUG:netmiko:In disable_paging
+DEBUG:netmiko:Command: terminal length 0
+
+DEBUG:netmiko:write_channel: b'terminal length 0\n'
+DEBUG:netmiko:Pattern is: terminal\ length\ 0
+DEBUG:netmiko:_read_channel_expect read_data: t
+DEBUG:netmiko:_read_channel_expect read_data: erminal length 0
+DEBUG:netmiko:Pattern found: terminal\ length\ 0 terminal length 0
+DEBUG:netmiko:terminal length 0
+DEBUG:netmiko:Exiting disable_paging
+DEBUG:netmiko:read_channel: 
+R01#
+DEBUG:netmiko:Clear buffer detects data in the channel
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+R01#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:[find_prompt()]: prompt is R01#
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:Pattern is: #
+DEBUG:netmiko:_read_channel_expect read_data: 
+
+DEBUG:netmiko:_read_channel_expect read_data: R01#
+DEBUG:netmiko:Pattern found: # 
+R01#
+DEBUG:netmiko:write_channel: b'configure terminal\n'
+DEBUG:netmiko:Pattern is: configure\ terminal
+DEBUG:netmiko:_read_channel_expect read_data: c
+DEBUG:netmiko:_read_channel_expect read_data: onfigure terminal
+
+DEBUG:netmiko:Pattern found: configure\ terminal configure terminal
+
+DEBUG:netmiko:Pattern is: R01
+DEBUG:netmiko:_read_channel_expect read_data: Enter configuration commands, one per line.  End with CNTL/Z.
+R01(config)#
+DEBUG:netmiko:Pattern found: R01 Enter configuration commands, one per line.  End with CNTL/Z.
+R01(config)#
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:Pattern is: #
+DEBUG:netmiko:_read_channel_expect read_data: 
+
+DEBUG:netmiko:_read_channel_expect read_data: R01(config)#
+DEBUG:netmiko:Pattern found: # 
+R01(config)#
+DEBUG:netmiko:write_channel: b'router ospf 100\n'
+DEBUG:netmiko:Pattern is: router\ ospf\ 100
+DEBUG:netmiko:_read_channel_expect read_data: r
+DEBUG:netmiko:_read_channel_expect read_data: outer ospf 100
+R01(config-router)#
+DEBUG:netmiko:Pattern found: router\ ospf\ 100 router ospf 100
+R01(config-router)#
+DEBUG:netmiko:write_channel: b'network 172.16.26.0 0.0.0.255 area 0\n'
+DEBUG:netmiko:Pattern is: network\ 172\.16\.26\.0\ 0\.0\.0\.255\ area\ 0
+DEBUG:netmiko:_read_channel_expect read_data: n
+DEBUG:netmiko:_read_channel_expect read_data: etwork
+DEBUG:netmiko:_read_channel_expect read_data:  172.16.26.0 0.0.0.255 area 0
+R01(config-router)#
+DEBUG:netmiko:Pattern found: network\ 172\.16\.26\.0\ 0\.0\.0\.255\ area\ 0 network 172.16.26.0 0.0.0.255 area 0
+R01(config-router)#
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:Pattern is: #
+DEBUG:netmiko:_read_channel_expect read_data: 
+
+DEBUG:netmiko:_read_channel_expect read_data: R01(config-router)#
+DEBUG:netmiko:Pattern found: # 
+R01(config-router)#
+DEBUG:netmiko:write_channel: b'end\n'
+DEBUG:netmiko:Pattern is: end
+DEBUG:netmiko:_read_channel_expect read_data: e
+DEBUG:netmiko:_read_channel_expect read_data: nd
+R01#
+DEBUG:netmiko:Pattern found: end end
+R01#
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:Pattern is: #
+DEBUG:netmiko:_read_channel_expect read_data: 
+
+DEBUG:netmiko:_read_channel_expect read_data: R01#
+DEBUG:netmiko:Pattern found: # 
+R01#
+DEBUG:netmiko:exit_config_mode: end
+R01#
+DEBUG:netmiko:configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+R01(config)#router ospf 100
+R01(config-router)#network 172.16.26.0 0.0.0.255 area 0
+R01(config-router)#end
+R01#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+R01#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:[find_prompt()]: prompt is R01#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'show ip ospf nei gi0/0 det | i up\n'
+DEBUG:netmiko:Pattern is: show\ ip\ ospf\ nei\ gi0/0\ det\ \|\ i\ up
+DEBUG:netmiko:_read_channel_expect read_data: s
+DEBUG:netmiko:_read_channel_expect read_data: how ip ospf nei gi0
+DEBUG:netmiko:_read_channel_expect read_data: /0 det | i up
+                     ^
+% Invalid input detected at '^' marker.
+
+R01#
+DEBUG:netmiko:Pattern found: show\ ip\ ospf\ nei\ gi0/0\ det\ \|\ i\ up show ip ospf nei gi0/0 det | i up
+                     ^
+% Invalid input detected at '^' marker.
+
+R01#
+DEBUG:netmiko:write_channel: b'clear ip ospf process\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: clear ip ospf process
+Reset ALL OSPF processes? [no]: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: Reset ALL OSPF processes? [no]: 
+DEBUG:netmiko:write_channel: b'yes\n'
+DEBUG:netmiko:read_channel: yes
+R01#
+DEBUG:netmiko:Clear buffer detects data in the channel
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+R01#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:[find_prompt()]: prompt is R01#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'show ip ospf nei gi0/0 det | i up\n'
+DEBUG:netmiko:Pattern is: show\ ip\ ospf\ nei\ gi0/0\ det\ \|\ i\ up
+DEBUG:netmiko:_read_channel_expect read_data: s
+DEBUG:netmiko:_read_channel_expect read_data: how ip ospf nei gi0/0 det | i up
+DEBUG:netmiko:Pattern found: show\ ip\ ospf\ nei\ gi0/0\ det\ \|\ i\ up show ip ospf nei gi0/0 det | i up
+DEBUG:netmiko:read_channel: 
+                     ^
+% Invalid input detected at '^' marker.
+
+R01#
+DEBUG:paramiko.transport:starting thread (client mode): 0xd98fed60
+DEBUG:paramiko.transport:Local version/idstring: SSH-2.0-paramiko_2.11.0
+DEBUG:paramiko.transport:Remote version/idstring: SSH-1.99-Cisco-1.25
+INFO:paramiko.transport:Connected (version 1.99, client Cisco-1.25)
+DEBUG:paramiko.transport:=== Key exchange possibilities ===
+DEBUG:paramiko.transport:kex algos: diffie-hellman-group-exchange-sha1, diffie-hellman-group14-sha1, diffie-hellman-group1-sha1
+DEBUG:paramiko.transport:server key: ssh-rsa
+DEBUG:paramiko.transport:client encrypt: aes128-cbc, 3des-cbc, aes192-cbc, aes256-cbc
+DEBUG:paramiko.transport:server encrypt: aes128-cbc, 3des-cbc, aes192-cbc, aes256-cbc
+DEBUG:paramiko.transport:client mac: hmac-sha1, hmac-sha1-96, hmac-md5, hmac-md5-96
+DEBUG:paramiko.transport:server mac: hmac-sha1, hmac-sha1-96, hmac-md5, hmac-md5-96
+DEBUG:paramiko.transport:client compress: none
+DEBUG:paramiko.transport:server compress: none
+DEBUG:paramiko.transport:client lang: <none>
+DEBUG:paramiko.transport:server lang: <none>
+DEBUG:paramiko.transport:kex follows: False
+DEBUG:paramiko.transport:=== Key exchange agreements ===
+DEBUG:paramiko.transport:Kex: diffie-hellman-group-exchange-sha1
+DEBUG:paramiko.transport:HostKey: ssh-rsa
+DEBUG:paramiko.transport:Cipher: aes128-cbc
+DEBUG:paramiko.transport:MAC: hmac-sha1
+DEBUG:paramiko.transport:Compression: none
+DEBUG:paramiko.transport:=== End of kex handshake ===
+DEBUG:paramiko.transport:Got server p (2048 bits)
+DEBUG:paramiko.transport:kex engine KexGex specified hash_algo <built-in function openssl_sha1>
+DEBUG:paramiko.transport:Switch to new keys ...
+DEBUG:paramiko.transport:Adding ssh-rsa host key for 172.16.26.153: b'96bef839c0e90158b4ebdaa16623406d'
+DEBUG:paramiko.transport:userauth is OK
+INFO:paramiko.transport:Authentication (password) successful!
+DEBUG:paramiko.transport:[chan 0] Max packet in: 32768 bytes
+DEBUG:paramiko.transport:[chan 0] Max packet out: 4096 bytes
+DEBUG:paramiko.transport:Secsh channel 0 opened.
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:netmiko:write_channel: b'terminal width 511\n'
+DEBUG:netmiko:Pattern is: terminal width 511
+DEBUG:netmiko:_read_channel_expect read_data: 
+R02-new#
+DEBUG:netmiko:_read_channel_expect read_data: t
+DEBUG:netmiko:_read_channel_expect read_data: erminal width 511
+R02-new#
+DEBUG:netmiko:Pattern found: terminal width 511 
+R02-new#terminal width 511
+R02-new#
+DEBUG:netmiko:In disable_paging
+DEBUG:netmiko:Command: terminal length 0
+
+DEBUG:netmiko:write_channel: b'terminal length 0\n'
+DEBUG:netmiko:Pattern is: terminal\ length\ 0
+DEBUG:netmiko:_read_channel_expect read_data: t
+DEBUG:netmiko:_read_channel_expect read_data: erminal length 0
+DEBUG:netmiko:Pattern found: terminal\ length\ 0 terminal length 0
+DEBUG:netmiko:terminal length 0
+DEBUG:netmiko:Exiting disable_paging
+DEBUG:netmiko:read_channel: 
+R02-new#
+DEBUG:netmiko:Clear buffer detects data in the channel
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+R02-new#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:[find_prompt()]: prompt is R02-new#
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:Pattern is: #
+DEBUG:netmiko:_read_channel_expect read_data: 
+
+DEBUG:netmiko:_read_channel_expect read_data: R02-new#
+DEBUG:netmiko:Pattern found: # 
+R02-new#
+DEBUG:netmiko:write_channel: b'configure terminal\n'
+DEBUG:netmiko:Pattern is: configure\ terminal
+DEBUG:netmiko:_read_channel_expect read_data: c
+DEBUG:netmiko:_read_channel_expect read_data: onfigu
+DEBUG:netmiko:_read_channel_expect read_data: re terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+R02-new(config)#
+DEBUG:netmiko:Pattern found: configure\ terminal configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+R02-new(config)#
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:Pattern is: #
+DEBUG:netmiko:_read_channel_expect read_data: 
+
+DEBUG:netmiko:_read_channel_expect read_data: R02-new(config)#
+DEBUG:netmiko:Pattern found: # 
+R02-new(config)#
+DEBUG:netmiko:write_channel: b'router ospf 100\n'
+DEBUG:netmiko:Pattern is: router\ ospf\ 100
+DEBUG:netmiko:_read_channel_expect read_data: r
+DEBUG:netmiko:_read_channel_expect read_data: outer ospf 10
+DEBUG:netmiko:_read_channel_expect read_data: 0
+R02-new(config-router)#
+DEBUG:netmiko:Pattern found: router\ ospf\ 100 router ospf 100
+R02-new(config-router)#
+DEBUG:netmiko:write_channel: b'network 172.16.26.0 0.0.0.255 area 0\n'
+DEBUG:netmiko:Pattern is: network\ 172\.16\.26\.0\ 0\.0\.0\.255\ area\ 0
+DEBUG:netmiko:_read_channel_expect read_data: n
+DEBUG:netmiko:_read_channel_expect read_data: etwork 17
+DEBUG:netmiko:_read_channel_expect read_data: 2.16.26.0 0.0.0.255 area 0
+R02-new(config-router)#
+DEBUG:netmiko:Pattern found: network\ 172\.16\.26\.0\ 0\.0\.0\.255\ area\ 0 network 172.16.26.0 0.0.0.255 area 0
+R02-new(config-router)#
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:Pattern is: #
+DEBUG:netmiko:_read_channel_expect read_data: 
+
+DEBUG:netmiko:_read_channel_expect read_data: R02-new(config-router)#
+DEBUG:netmiko:Pattern found: # 
+R02-new(config-router)#
+DEBUG:netmiko:write_channel: b'end\n'
+DEBUG:netmiko:Pattern is: end
+DEBUG:netmiko:_read_channel_expect read_data: e
+DEBUG:netmiko:_read_channel_expect read_data: nd
+R02-new#
+DEBUG:netmiko:Pattern found: end end
+R02-new#
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:Pattern is: #
+DEBUG:netmiko:_read_channel_expect read_data: 
+
+DEBUG:netmiko:_read_channel_expect read_data: R02-new#
+DEBUG:netmiko:Pattern found: # 
+R02-new#
+DEBUG:netmiko:exit_config_mode: end
+R02-new#
+DEBUG:netmiko:configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+R02-new(config)#router ospf 100
+R02-new(config-router)#network 172.16.26.0 0.0.0.255 area 0
+R02-new(config-router)#end
+R02-new#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+
+DEBUG:netmiko:read_channel: R02-new#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:[find_prompt()]: prompt is R02-new#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'show ip ospf nei gi0/0 det | i up\n'
+DEBUG:netmiko:Pattern is: show\ ip\ ospf\ nei\ gi0/0\ det\ \|\ i\ up
+DEBUG:netmiko:_read_channel_expect read_data: s
+DEBUG:netmiko:_read_channel_expect read_data: how ip o
+DEBUG:netmiko:_read_channel_expect read_data: spf nei gi0/0 det | i up
+
+DEBUG:netmiko:Pattern found: show\ ip\ ospf\ nei\ gi0/0\ det\ \|\ i\ up show ip ospf nei gi0/0 det | i up
+
+DEBUG:netmiko:read_channel:                          ^
+% Invalid input detected at '^' marker.
+
+R02-new#
+DEBUG:netmiko:write_channel: b'clear ip ospf process\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: clear ip ospf process
+Reset ALL OSPF processes? [no]: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: Reset ALL OSPF processes? [no]: 
+DEBUG:netmiko:write_channel: b'yes\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: yes
+R02-new#
+R02-new#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:[find_prompt()]: prompt is R02-new#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'show ip ospf nei gi0/0 det | i up\n'
+DEBUG:netmiko:Pattern is: show\ ip\ ospf\ nei\ gi0/0\ det\ \|\ i\ up
+DEBUG:netmiko:_read_channel_expect read_data: s
+DEBUG:netmiko:_read_channel_expect read_data: how ip o
+DEBUG:netmiko:_read_channel_expect read_data: spf nei gi0/0 det | i up
+
+DEBUG:netmiko:Pattern found: show\ ip\ ospf\ nei\ gi0/0\ det\ \|\ i\ up show ip ospf nei gi0/0 det | i up
+
+DEBUG:netmiko:read_channel:                          ^
+% Invalid input detected at '^' marker.
+
+R02-new#
+DEBUG:paramiko.transport:starting thread (client mode): 0xd991c100
+DEBUG:paramiko.transport:Local version/idstring: SSH-2.0-paramiko_2.11.0
+DEBUG:paramiko.transport:Remote version/idstring: SSH-1.99-Cisco-1.25
+INFO:paramiko.transport:Connected (version 1.99, client Cisco-1.25)
+DEBUG:paramiko.transport:=== Key exchange possibilities ===
+DEBUG:paramiko.transport:kex algos: diffie-hellman-group-exchange-sha1, diffie-hellman-group14-sha1, diffie-hellman-group1-sha1
+DEBUG:paramiko.transport:server key: ssh-rsa
+DEBUG:paramiko.transport:client encrypt: aes128-ctr, aes192-ctr, aes256-ctr, aes128-cbc, 3des-cbc, aes192-cbc, aes256-cbc
+DEBUG:paramiko.transport:server encrypt: aes128-ctr, aes192-ctr, aes256-ctr, aes128-cbc, 3des-cbc, aes192-cbc, aes256-cbc
+DEBUG:paramiko.transport:client mac: hmac-sha1, hmac-sha1-96
+DEBUG:paramiko.transport:server mac: hmac-sha1, hmac-sha1-96
+DEBUG:paramiko.transport:client compress: none
+DEBUG:paramiko.transport:server compress: none
+DEBUG:paramiko.transport:client lang: <none>
+DEBUG:paramiko.transport:server lang: <none>
+DEBUG:paramiko.transport:kex follows: False
+DEBUG:paramiko.transport:=== Key exchange agreements ===
+DEBUG:paramiko.transport:Kex: diffie-hellman-group-exchange-sha1
+DEBUG:paramiko.transport:HostKey: ssh-rsa
+DEBUG:paramiko.transport:Cipher: aes128-ctr
+DEBUG:paramiko.transport:MAC: hmac-sha1
+DEBUG:paramiko.transport:Compression: none
+DEBUG:paramiko.transport:=== End of kex handshake ===
+DEBUG:paramiko.transport:Got server p (2048 bits)
+DEBUG:paramiko.transport:kex engine KexGex specified hash_algo <built-in function openssl_sha1>
+DEBUG:paramiko.transport:Switch to new keys ...
+DEBUG:paramiko.transport:Adding ssh-rsa host key for 172.16.26.169: b'20377e1398e54a48df55960b3290fb90'
+DEBUG:paramiko.transport:userauth is OK
+INFO:paramiko.transport:Auth banner: b"\r\n**************************************************************************\r\n* IOSv is strictly limited to use for evaluation, demonstration and IOS  *\r\n* education. IOSv is provided as-is and is not supported by Cisco's      *\r\n* Technical Advisory Center. Any use or disclosure, in whole or in part, *\r\n* of the IOSv Software or Documentation to any third party for any       *\r\n* purposes is expressly prohibited except as otherwise authorized by     *\r\n* Cisco in writing.                                                      *\r\n**************************************************************************"
+INFO:paramiko.transport:Authentication (password) successful!
+DEBUG:paramiko.transport:[chan 0] Max packet in: 32768 bytes
+DEBUG:paramiko.transport:[chan 0] Max packet out: 4096 bytes
+DEBUG:paramiko.transport:Secsh channel 0 opened.
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:netmiko:write_channel: b'terminal width 511\n'
+DEBUG:netmiko:Pattern is: terminal width 511
+DEBUG:netmiko:_read_channel_expect read_data: 
+**************************************************************************
+* IOSv is strictly limited to use for evaluation, demonstration and IOS  *
+* education. IOSv is provided as-is and is not supported by Cisco's      *
+* Technical Advisory Center. Any use or disclosure, in whole or in part, *
+* of the IOSv Software or Documentation to any third party for any       *
+* purposes is expressly prohibited except as otherwise authorized by     *
+* Cisco in writing.                                                      *
+**************************************************************************
+SW08#
+DEBUG:netmiko:_read_channel_expect read_data: t
+DEBUG:netmiko:_read_channel_expect read_data: er
+DEBUG:netmiko:_read_channel_expect read_data: mina
+DEBUG:netmiko:_read_channel_expect read_data: l w
+DEBUG:netmiko:_read_channel_expect read_data: idth
+DEBUG:netmiko:_read_channel_expect read_data:  511
+DEBUG:netmiko:Pattern found: terminal width 511 
+**************************************************************************
+* IOSv is strictly limited to use for evaluation, demonstration and IOS  *
+* education. IOSv is provided as-is and is not supported by Cisco's      *
+* Technical Advisory Center. Any use or disclosure, in whole or in part, *
+* of the IOSv Software or Documentation to any third party for any       *
+* purposes is expressly prohibited except as otherwise authorized by     *
+* Cisco in writing.                                                      *
+**************************************************************************
+SW08#terminal width 511
+DEBUG:netmiko:In disable_paging
+DEBUG:netmiko:Command: terminal length 0
+
+DEBUG:netmiko:write_channel: b'terminal length 0\n'
+DEBUG:netmiko:Pattern is: terminal\ length\ 0
+DEBUG:netmiko:_read_channel_expect read_data: 
+
+DEBUG:netmiko:_read_channel_expect read_data: SW08#t
+DEBUG:netmiko:_read_channel_expect read_data: ermi
+DEBUG:netmiko:_read_channel_expect read_data: nal 
+DEBUG:netmiko:_read_channel_expect read_data: lengt
+DEBUG:netmiko:_read_channel_expect read_data: h 0
+
+DEBUG:netmiko:Pattern found: terminal\ length\ 0 
+SW08#terminal length 0
+
+DEBUG:netmiko:
+SW08#terminal length 0
+
+DEBUG:netmiko:Exiting disable_paging
+DEBUG:netmiko:read_channel: SW08#
+DEBUG:netmiko:Clear buffer detects data in the channel
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+SW08#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:[find_prompt()]: prompt is SW08#
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:Pattern is: #
+DEBUG:netmiko:_read_channel_expect read_data: 
+
+DEBUG:netmiko:_read_channel_expect read_data: SW08#
+DEBUG:netmiko:Pattern found: # 
+SW08#
+DEBUG:netmiko:write_channel: b'configure terminal\n'
+DEBUG:netmiko:Pattern is: configure\ terminal
+DEBUG:netmiko:_read_channel_expect read_data: c
+DEBUG:netmiko:_read_channel_expect read_data: on
+DEBUG:netmiko:_read_channel_expect read_data: figu
+DEBUG:netmiko:_read_channel_expect read_data: re 
+DEBUG:netmiko:_read_channel_expect read_data: term
+DEBUG:netmiko:_read_channel_expect read_data: inal
+
+DEBUG:netmiko:Pattern found: configure\ terminal configure terminal
+
+DEBUG:netmiko:Pattern is: SW08
+DEBUG:netmiko:_read_channel_expect read_data: Enter configuration commands, one per line.  End with CNTL/Z.
+SW08(config)#
+DEBUG:netmiko:Pattern found: SW08 Enter configuration commands, one per line.  End with CNTL/Z.
+SW08(config)#
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:Pattern is: #
+DEBUG:netmiko:_read_channel_expect read_data: 
+
+DEBUG:netmiko:_read_channel_expect read_data: SW08(config)#
+DEBUG:netmiko:Pattern found: # 
+SW08(config)#
+DEBUG:netmiko:write_channel: b'router ospf 100\n'
+DEBUG:netmiko:Pattern is: router\ ospf\ 100
+DEBUG:netmiko:_read_channel_expect read_data: r
+DEBUG:netmiko:_read_channel_expect read_data: out
+DEBUG:netmiko:_read_channel_expect read_data: er o
+DEBUG:netmiko:_read_channel_expect read_data: spf
+DEBUG:netmiko:_read_channel_expect read_data:  100
+DEBUG:netmiko:Pattern found: router\ ospf\ 100 router ospf 100
+DEBUG:netmiko:Pattern is: (?:SW08|#)
+DEBUG:netmiko:_read_channel_expect read_data: 
+
+DEBUG:netmiko:_read_channel_expect read_data: SW08(config-router)#
+DEBUG:netmiko:Pattern found: (?:SW08|#) 
+SW08(config-router)#
+DEBUG:netmiko:write_channel: b'network 172.16.26.0 0.0.0.255 area 0\n'
+DEBUG:netmiko:Pattern is: network\ 172\.16\.26\.0\ 0\.0\.0\.255\ area\ 0
+DEBUG:netmiko:_read_channel_expect read_data: n
+DEBUG:netmiko:_read_channel_expect read_data: e
+DEBUG:netmiko:_read_channel_expect read_data: twor
+DEBUG:netmiko:_read_channel_expect read_data: k 17
+DEBUG:netmiko:_read_channel_expect read_data: 2.16.2
+DEBUG:netmiko:_read_channel_expect read_data: 6.0 
+DEBUG:netmiko:_read_channel_expect read_data: 0.0.
+DEBUG:netmiko:_read_channel_expect read_data: 0.25
+DEBUG:netmiko:_read_channel_expect read_data: 5 ar
+DEBUG:netmiko:_read_channel_expect read_data: ea 0
+
+DEBUG:netmiko:Pattern found: network\ 172\.16\.26\.0\ 0\.0\.0\.255\ area\ 0 network 172.16.26.0 0.0.0.255 area 0
+
+DEBUG:netmiko:Pattern is: (?:SW08|#)
+DEBUG:netmiko:_read_channel_expect read_data: SW08(config-router)#
+DEBUG:netmiko:Pattern found: (?:SW08|#) SW08(config-router)#
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:Pattern is: #
+DEBUG:netmiko:_read_channel_expect read_data: 
+
+DEBUG:netmiko:_read_channel_expect read_data: SW08(config-router)#
+DEBUG:netmiko:Pattern found: # 
+SW08(config-router)#
+DEBUG:netmiko:write_channel: b'end\n'
+DEBUG:netmiko:Pattern is: end
+DEBUG:netmiko:_read_channel_expect read_data: e
+DEBUG:netmiko:_read_channel_expect read_data: n
+DEBUG:netmiko:_read_channel_expect read_data: d
+SW08#
+DEBUG:netmiko:Pattern found: end end
+SW08#
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:Pattern is: #
+DEBUG:netmiko:_read_channel_expect read_data: 
+
+DEBUG:netmiko:_read_channel_expect read_data: SW08#
+DEBUG:netmiko:Pattern found: # 
+SW08#
+DEBUG:netmiko:exit_config_mode: end
+SW08#
+DEBUG:netmiko:configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+SW08(config)#router ospf 100
+SW08(config-router)#network 172.16.26.0 0.0.0.255 area 0
+SW08(config-router)#end
+SW08#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: SW08#
+SW08#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:[find_prompt()]: prompt is SW08#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'show ip ospf nei gi0/0 det | i up\n'
+DEBUG:netmiko:Pattern is: show\ ip\ ospf\ nei\ gi0/0\ det\ \|\ i\ up
+DEBUG:netmiko:_read_channel_expect read_data: s
+DEBUG:netmiko:_read_channel_expect read_data: h
+DEBUG:netmiko:_read_channel_expect read_data: ow i
+DEBUG:netmiko:_read_channel_expect read_data: p os
+DEBUG:netmiko:_read_channel_expect read_data: pf ne
+DEBUG:netmiko:_read_channel_expect read_data: i gi
+DEBUG:netmiko:_read_channel_expect read_data: 0/0 d
+DEBUG:netmiko:_read_channel_expect read_data: et |
+DEBUG:netmiko:_read_channel_expect read_data:  i u
+DEBUG:netmiko:_read_channel_expect read_data: p
+    Neighbor is up for 00:00:01
+    Neighbor is up for 00:00:06
+SW08#
+DEBUG:netmiko:Pattern found: show\ ip\ ospf\ nei\ gi0/0\ det\ \|\ i\ up show ip ospf nei gi0/0 det | i up
+    Neighbor is up for 00:00:01
+    Neighbor is up for 00:00:06
+SW08#
+DEBUG:netmiko:write_channel: b'clear ip ospf process\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: clear ip ospf process
+Reset ALL OSPF processes? [no]: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: Reset ALL OSPF processes? [no]: 
+DEBUG:paramiko.transport:EOF in transport thread
+DEBUG:netmiko:write_channel: b'yes\n'
+DEBUG:netmiko:read_channel: ye
+DEBUG:netmiko:Clear buffer detects data in the channel
+DEBUG:netmiko:read_channel: s
+SW08#
+DEBUG:netmiko:Clear buffer detects data in the channel
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+SW08#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:[find_prompt()]: prompt is SW08#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'show ip ospf nei gi0/0 det | i up\n'
+DEBUG:netmiko:Pattern is: show\ ip\ ospf\ nei\ gi0/0\ det\ \|\ i\ up
+DEBUG:netmiko:_read_channel_expect read_data: s
+DEBUG:netmiko:_read_channel_expect read_data: h
+DEBUG:netmiko:_read_channel_expect read_data: ow ip 
+DEBUG:netmiko:_read_channel_expect read_data: ospf
+DEBUG:netmiko:_read_channel_expect read_data:  nei 
+DEBUG:netmiko:_read_channel_expect read_data: gi0/0
+DEBUG:netmiko:_read_channel_expect read_data:  det
+DEBUG:netmiko:_read_channel_expect read_data:  | i
+DEBUG:netmiko:_read_channel_expect read_data:  up
+
+DEBUG:netmiko:Pattern found: show\ ip\ ospf\ nei\ gi0/0\ det\ \|\ i\ up show ip ospf nei gi0/0 det | i up
+
+DEBUG:netmiko:read_channel:     Neighbor is up for 00:00:00
+SW08#
+DEBUG:paramiko.transport:EOF in transport thread
+DEBUG:paramiko.transport:starting thread (client mode): 0x20e86790
+DEBUG:paramiko.transport:Local version/idstring: SSH-2.0-paramiko_2.11.0
+DEBUG:paramiko.transport:Remote version/idstring: SSH-1.99-Cisco-1.25
+INFO:paramiko.transport:Connected (version 1.99, client Cisco-1.25)
+DEBUG:paramiko.transport:=== Key exchange possibilities ===
+DEBUG:paramiko.transport:kex algos: diffie-hellman-group-exchange-sha1, diffie-hellman-group14-sha1, diffie-hellman-group1-sha1
+DEBUG:paramiko.transport:server key: ssh-rsa
+DEBUG:paramiko.transport:client encrypt: aes128-cbc, 3des-cbc, aes192-cbc, aes256-cbc
+DEBUG:paramiko.transport:server encrypt: aes128-cbc, 3des-cbc, aes192-cbc, aes256-cbc
+DEBUG:paramiko.transport:client mac: hmac-sha1, hmac-sha1-96, hmac-md5, hmac-md5-96
+DEBUG:paramiko.transport:server mac: hmac-sha1, hmac-sha1-96, hmac-md5, hmac-md5-96
+DEBUG:paramiko.transport:client compress: none
+DEBUG:paramiko.transport:server compress: none
+DEBUG:paramiko.transport:client lang: <none>
+DEBUG:paramiko.transport:server lang: <none>
+DEBUG:paramiko.transport:kex follows: False
+DEBUG:paramiko.transport:=== Key exchange agreements ===
+DEBUG:paramiko.transport:Kex: diffie-hellman-group-exchange-sha1
+DEBUG:paramiko.transport:HostKey: ssh-rsa
+DEBUG:paramiko.transport:Cipher: aes128-cbc
+DEBUG:paramiko.transport:MAC: hmac-sha1
+DEBUG:paramiko.transport:Compression: none
+DEBUG:paramiko.transport:=== End of kex handshake ===
+DEBUG:paramiko.transport:Got server p (2048 bits)
+DEBUG:paramiko.transport:kex engine KexGex specified hash_algo <built-in function openssl_sha1>
+DEBUG:paramiko.transport:Switch to new keys ...
+DEBUG:paramiko.transport:Adding ssh-rsa host key for 172.16.26.162: b'8d08b183a87df0abf672f6af23d1fad5'
+DEBUG:paramiko.transport:userauth is OK
+INFO:paramiko.transport:Authentication (password) successful!
+DEBUG:paramiko.transport:[chan 0] Max packet in: 32768 bytes
+DEBUG:paramiko.transport:[chan 0] Max packet out: 4096 bytes
+DEBUG:paramiko.transport:Secsh channel 0 opened.
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:netmiko:write_channel: b'terminal width 511\n'
+DEBUG:netmiko:Pattern is: terminal width 511
+DEBUG:netmiko:_read_channel_expect read_data: 
+R01#
+DEBUG:netmiko:_read_channel_expect read_data: t
+DEBUG:netmiko:_read_channel_expect read_data: erminal width 511
+R01#
+DEBUG:netmiko:Pattern found: terminal width 511 
+R01#terminal width 511
+R01#
+DEBUG:netmiko:In disable_paging
+DEBUG:netmiko:Command: terminal length 0
+
+DEBUG:netmiko:write_channel: b'terminal length 0\n'
+DEBUG:netmiko:Pattern is: terminal\ length\ 0
+DEBUG:netmiko:_read_channel_expect read_data: t
+DEBUG:netmiko:_read_channel_expect read_data: e
+DEBUG:netmiko:_read_channel_expect read_data: rminal length 0
+R01#
+DEBUG:netmiko:Pattern found: terminal\ length\ 0 terminal length 0
+R01#
+DEBUG:netmiko:terminal length 0
+R01#
+DEBUG:netmiko:Exiting disable_paging
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+R01#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:[find_prompt()]: prompt is R01#
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:Pattern is: #
+DEBUG:netmiko:_read_channel_expect read_data: 
+
+DEBUG:netmiko:_read_channel_expect read_data: R01#
+DEBUG:netmiko:Pattern found: # 
+R01#
+DEBUG:netmiko:write_channel: b'configure terminal\n'
+DEBUG:netmiko:Pattern is: configure\ terminal
+DEBUG:netmiko:_read_channel_expect read_data: c
+DEBUG:netmiko:_read_channel_expect read_data: onfigure t
+DEBUG:netmiko:_read_channel_expect read_data: erminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+R01(config)#
+DEBUG:netmiko:Pattern found: configure\ terminal configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+R01(config)#
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:Pattern is: #
+DEBUG:netmiko:_read_channel_expect read_data: 
+
+DEBUG:netmiko:_read_channel_expect read_data: R01(config)#
+DEBUG:netmiko:Pattern found: # 
+R01(config)#
+DEBUG:netmiko:write_channel: b'no router ospf 100\n'
+DEBUG:netmiko:Pattern is: no\ router\ ospf\ 100
+DEBUG:netmiko:_read_channel_expect read_data: n
+DEBUG:netmiko:_read_channel_expect read_data: o router ospf 100
+
+DEBUG:netmiko:Pattern found: no\ router\ ospf\ 100 no router ospf 100
+
+DEBUG:netmiko:Pattern is: (?:R01|#)
+DEBUG:netmiko:_read_channel_expect read_data: R01(config)#
+DEBUG:netmiko:Pattern found: (?:R01|#) R01(config)#
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:Pattern is: #
+DEBUG:netmiko:_read_channel_expect read_data: 
+
+DEBUG:netmiko:_read_channel_expect read_data: R01(config)#
+DEBUG:netmiko:Pattern found: # 
+R01(config)#
+DEBUG:netmiko:write_channel: b'end\n'
+DEBUG:netmiko:Pattern is: end
+DEBUG:netmiko:_read_channel_expect read_data: e
+DEBUG:netmiko:_read_channel_expect read_data: nd
+R01#
+DEBUG:netmiko:Pattern found: end end
+R01#
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:Pattern is: #
+DEBUG:netmiko:_read_channel_expect read_data: 
+
+DEBUG:netmiko:_read_channel_expect read_data: R01#
+DEBUG:netmiko:Pattern found: # 
+R01#
+DEBUG:netmiko:exit_config_mode: end
+R01#
+DEBUG:netmiko:configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+R01(config)#no router ospf 100
+R01(config)#end
+R01#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+R01#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:[find_prompt()]: prompt is R01#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'show ip ospf nei gi0/0 det | i up\n'
+DEBUG:netmiko:Pattern is: show\ ip\ ospf\ nei\ gi0/0\ det\ \|\ i\ up
+DEBUG:netmiko:_read_channel_expect read_data: s
+DEBUG:netmiko:_read_channel_expect read_data: how ip ospf nei gi0
+DEBUG:netmiko:_read_channel_expect read_data: /0 det | i up
+
+DEBUG:netmiko:Pattern found: show\ ip\ ospf\ nei\ gi0/0\ det\ \|\ i\ up show ip ospf nei gi0/0 det | i up
+
+DEBUG:netmiko:read_channel:                      ^
+% Invalid input detected at '^' marker.
+
+R01#
+DEBUG:netmiko:write_channel: b'clear ip ospf process\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: clear ip ospf process
+R01#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: 
+DEBUG:paramiko.transport:starting thread (client mode): 0x20eccbb0
+DEBUG:paramiko.transport:Local version/idstring: SSH-2.0-paramiko_2.11.0
+DEBUG:paramiko.transport:Remote version/idstring: SSH-1.99-Cisco-1.25
+INFO:paramiko.transport:Connected (version 1.99, client Cisco-1.25)
+DEBUG:paramiko.transport:=== Key exchange possibilities ===
+DEBUG:paramiko.transport:kex algos: diffie-hellman-group-exchange-sha1, diffie-hellman-group14-sha1, diffie-hellman-group1-sha1
+DEBUG:paramiko.transport:server key: ssh-rsa
+DEBUG:paramiko.transport:client encrypt: aes128-cbc, 3des-cbc, aes192-cbc, aes256-cbc
+DEBUG:paramiko.transport:server encrypt: aes128-cbc, 3des-cbc, aes192-cbc, aes256-cbc
+DEBUG:paramiko.transport:client mac: hmac-sha1, hmac-sha1-96, hmac-md5, hmac-md5-96
+DEBUG:paramiko.transport:server mac: hmac-sha1, hmac-sha1-96, hmac-md5, hmac-md5-96
+DEBUG:paramiko.transport:client compress: none
+DEBUG:paramiko.transport:server compress: none
+DEBUG:paramiko.transport:client lang: <none>
+DEBUG:paramiko.transport:server lang: <none>
+DEBUG:paramiko.transport:kex follows: False
+DEBUG:paramiko.transport:=== Key exchange agreements ===
+DEBUG:paramiko.transport:Kex: diffie-hellman-group-exchange-sha1
+DEBUG:paramiko.transport:HostKey: ssh-rsa
+DEBUG:paramiko.transport:Cipher: aes128-cbc
+DEBUG:paramiko.transport:MAC: hmac-sha1
+DEBUG:paramiko.transport:Compression: none
+DEBUG:paramiko.transport:=== End of kex handshake ===
+DEBUG:paramiko.transport:Got server p (2048 bits)
+DEBUG:paramiko.transport:kex engine KexGex specified hash_algo <built-in function openssl_sha1>
+DEBUG:paramiko.transport:Switch to new keys ...
+DEBUG:paramiko.transport:Adding ssh-rsa host key for 172.16.26.153: b'96bef839c0e90158b4ebdaa16623406d'
+DEBUG:paramiko.transport:userauth is OK
+INFO:paramiko.transport:Authentication (password) successful!
+DEBUG:paramiko.transport:[chan 0] Max packet in: 32768 bytes
+DEBUG:paramiko.transport:[chan 0] Max packet out: 4096 bytes
+DEBUG:paramiko.transport:Secsh channel 0 opened.
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:netmiko:write_channel: b'terminal width 511\n'
+DEBUG:netmiko:Pattern is: terminal width 511
+DEBUG:netmiko:_read_channel_expect read_data: 
+R02-new#
+DEBUG:netmiko:_read_channel_expect read_data: terminal width 511
+
+DEBUG:netmiko:Pattern found: terminal width 511 
+R02-new#terminal width 511
+
+DEBUG:netmiko:In disable_paging
+DEBUG:netmiko:Command: terminal length 0
+
+DEBUG:netmiko:write_channel: b'terminal length 0\n'
+DEBUG:netmiko:Pattern is: terminal\ length\ 0
+DEBUG:netmiko:_read_channel_expect read_data: R02-new#
+DEBUG:netmiko:_read_channel_expect read_data: terminal len
+DEBUG:netmiko:_read_channel_expect read_data: gth 0
+R02-new#
+DEBUG:netmiko:Pattern found: terminal\ length\ 0 R02-new#terminal length 0
+R02-new#
+DEBUG:netmiko:R02-new#terminal length 0
+R02-new#
+DEBUG:netmiko:Exiting disable_paging
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+R02-new#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:[find_prompt()]: prompt is R02-new#
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:Pattern is: #
+DEBUG:netmiko:_read_channel_expect read_data: 
+
+DEBUG:netmiko:_read_channel_expect read_data: R02-new#
+DEBUG:netmiko:Pattern found: # 
+R02-new#
+DEBUG:netmiko:write_channel: b'configure terminal\n'
+DEBUG:netmiko:Pattern is: configure\ terminal
+DEBUG:netmiko:_read_channel_expect read_data: c
+DEBUG:netmiko:_read_channel_expect read_data: onfig
+DEBUG:netmiko:_read_channel_expect read_data: ure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+R02-new(config)#
+DEBUG:netmiko:Pattern found: configure\ terminal configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+R02-new(config)#
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:Pattern is: #
+DEBUG:netmiko:_read_channel_expect read_data: 
+
+DEBUG:netmiko:_read_channel_expect read_data: R02-new(config)#
+DEBUG:netmiko:Pattern found: # 
+R02-new(config)#
+DEBUG:netmiko:write_channel: b'no router ospf 100\n'
+DEBUG:netmiko:Pattern is: no\ router\ ospf\ 100
+DEBUG:netmiko:_read_channel_expect read_data: n
+DEBUG:netmiko:_read_channel_expect read_data: o router ospf 100
+
+DEBUG:netmiko:Pattern found: no\ router\ ospf\ 100 no router ospf 100
+
+DEBUG:netmiko:Pattern is: (?:R02\-new|#)
+DEBUG:netmiko:_read_channel_expect read_data: R02-new(config)#
+DEBUG:netmiko:Pattern found: (?:R02\-new|#) R02-new(config)#
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:Pattern is: #
+DEBUG:netmiko:_read_channel_expect read_data: 
+
+DEBUG:netmiko:_read_channel_expect read_data: R02-new(config)#
+DEBUG:netmiko:Pattern found: # 
+R02-new(config)#
+DEBUG:netmiko:write_channel: b'end\n'
+DEBUG:netmiko:Pattern is: end
+DEBUG:netmiko:_read_channel_expect read_data: e
+DEBUG:netmiko:_read_channel_expect read_data: nd
+R02-new#
+DEBUG:netmiko:Pattern found: end end
+R02-new#
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:Pattern is: #
+DEBUG:netmiko:_read_channel_expect read_data: 
+
+DEBUG:netmiko:_read_channel_expect read_data: R02-new#
+DEBUG:netmiko:Pattern found: # 
+R02-new#
+DEBUG:netmiko:exit_config_mode: end
+R02-new#
+DEBUG:netmiko:configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+R02-new(config)#no router ospf 100
+R02-new(config)#end
+R02-new#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+R02-new#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:[find_prompt()]: prompt is R02-new#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'show ip ospf nei gi0/0 det | i up\n'
+DEBUG:netmiko:Pattern is: show\ ip\ ospf\ nei\ gi0/0\ det\ \|\ i\ up
+DEBUG:netmiko:_read_channel_expect read_data: s
+DEBUG:netmiko:_read_channel_expect read_data: how ip ospf nei gi0
+DEBUG:netmiko:_read_channel_expect read_data: /0 det | i up
+
+DEBUG:netmiko:Pattern found: show\ ip\ ospf\ nei\ gi0/0\ det\ \|\ i\ up show ip ospf nei gi0/0 det | i up
+
+DEBUG:netmiko:read_channel:                          ^
+% Invalid input detected at '^' marker.
+
+R02-new#
+DEBUG:netmiko:write_channel: b'clear ip ospf process\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: clear ip ospf process
+R02-new#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: 
+DEBUG:paramiko.transport:starting thread (client mode): 0x20eeb040
+DEBUG:paramiko.transport:Local version/idstring: SSH-2.0-paramiko_2.11.0
+DEBUG:paramiko.transport:Remote version/idstring: SSH-1.99-Cisco-1.25
+INFO:paramiko.transport:Connected (version 1.99, client Cisco-1.25)
+DEBUG:paramiko.transport:=== Key exchange possibilities ===
+DEBUG:paramiko.transport:kex algos: diffie-hellman-group-exchange-sha1, diffie-hellman-group14-sha1, diffie-hellman-group1-sha1
+DEBUG:paramiko.transport:server key: ssh-rsa
+DEBUG:paramiko.transport:client encrypt: aes128-ctr, aes192-ctr, aes256-ctr, aes128-cbc, 3des-cbc, aes192-cbc, aes256-cbc
+DEBUG:paramiko.transport:server encrypt: aes128-ctr, aes192-ctr, aes256-ctr, aes128-cbc, 3des-cbc, aes192-cbc, aes256-cbc
+DEBUG:paramiko.transport:client mac: hmac-sha1, hmac-sha1-96
+DEBUG:paramiko.transport:server mac: hmac-sha1, hmac-sha1-96
+DEBUG:paramiko.transport:client compress: none
+DEBUG:paramiko.transport:server compress: none
+DEBUG:paramiko.transport:client lang: <none>
+DEBUG:paramiko.transport:server lang: <none>
+DEBUG:paramiko.transport:kex follows: False
+DEBUG:paramiko.transport:=== Key exchange agreements ===
+DEBUG:paramiko.transport:Kex: diffie-hellman-group-exchange-sha1
+DEBUG:paramiko.transport:HostKey: ssh-rsa
+DEBUG:paramiko.transport:Cipher: aes128-ctr
+DEBUG:paramiko.transport:MAC: hmac-sha1
+DEBUG:paramiko.transport:Compression: none
+DEBUG:paramiko.transport:=== End of kex handshake ===
+DEBUG:paramiko.transport:Got server p (2048 bits)
+DEBUG:paramiko.transport:kex engine KexGex specified hash_algo <built-in function openssl_sha1>
+DEBUG:paramiko.transport:Switch to new keys ...
+DEBUG:paramiko.transport:Adding ssh-rsa host key for 172.16.26.169: b'20377e1398e54a48df55960b3290fb90'
+DEBUG:paramiko.transport:userauth is OK
+INFO:paramiko.transport:Auth banner: b"\r\n**************************************************************************\r\n* IOSv is strictly limited to use for evaluation, demonstration and IOS  *\r\n* education. IOSv is provided as-is and is not supported by Cisco's      *\r\n* Technical Advisory Center. Any use or disclosure, in whole or in part, *\r\n* of the IOSv Software or Documentation to any third party for any       *\r\n* purposes is expressly prohibited except as otherwise authorized by     *\r\n* Cisco in writing.                                                      *\r\n**************************************************************************"
+INFO:paramiko.transport:Authentication (password) successful!
+DEBUG:paramiko.transport:[chan 0] Max packet in: 32768 bytes
+DEBUG:paramiko.transport:[chan 0] Max packet out: 4096 bytes
+DEBUG:paramiko.transport:Secsh channel 0 opened.
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:netmiko:write_channel: b'terminal width 511\n'
+DEBUG:netmiko:Pattern is: terminal width 511
+DEBUG:netmiko:_read_channel_expect read_data: 
+**************************************************************************
+* IOSv is strictly limited to use for evaluation, demonstration and IOS  *
+* education. IOSv is provided as-is and is not supported by Cisco's      *
+* Technical Advisory Center. Any use or disclosure, in whole or in part, *
+* of the IOSv Software or Documentation to any third party for any       *
+* purposes is expressly prohibited except as otherwise authorized by     *
+* Cisco in writing.                                                      *
+**************************************************************************
+SW08#
+DEBUG:netmiko:_read_channel_expect read_data: t
+DEBUG:netmiko:_read_channel_expect read_data: ermin
+DEBUG:netmiko:_read_channel_expect read_data: al wi
+DEBUG:netmiko:_read_channel_expect read_data: dth 5
+DEBUG:netmiko:_read_channel_expect read_data: 11
+SW08#
+DEBUG:netmiko:Pattern found: terminal width 511 
+**************************************************************************
+* IOSv is strictly limited to use for evaluation, demonstration and IOS  *
+* education. IOSv is provided as-is and is not supported by Cisco's      *
+* Technical Advisory Center. Any use or disclosure, in whole or in part, *
+* of the IOSv Software or Documentation to any third party for any       *
+* purposes is expressly prohibited except as otherwise authorized by     *
+* Cisco in writing.                                                      *
+**************************************************************************
+SW08#terminal width 511
+SW08#
+DEBUG:netmiko:In disable_paging
+DEBUG:netmiko:Command: terminal length 0
+
+DEBUG:netmiko:write_channel: b'terminal length 0\n'
+DEBUG:netmiko:Pattern is: terminal\ length\ 0
+DEBUG:netmiko:_read_channel_expect read_data: t
+DEBUG:netmiko:_read_channel_expect read_data: erm
+DEBUG:netmiko:_read_channel_expect read_data: inal
+DEBUG:netmiko:_read_channel_expect read_data:  lengt
+DEBUG:netmiko:_read_channel_expect read_data: h 0
+
+DEBUG:netmiko:Pattern found: terminal\ length\ 0 terminal length 0
+
+DEBUG:netmiko:terminal length 0
+
+DEBUG:netmiko:Exiting disable_paging
+DEBUG:netmiko:read_channel: SW08#
+DEBUG:netmiko:Clear buffer detects data in the channel
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+SW08#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:[find_prompt()]: prompt is SW08#
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:Pattern is: #
+DEBUG:netmiko:_read_channel_expect read_data: 
+
+DEBUG:netmiko:_read_channel_expect read_data: SW08#
+DEBUG:netmiko:Pattern found: # 
+SW08#
+DEBUG:netmiko:write_channel: b'configure terminal\n'
+DEBUG:netmiko:Pattern is: configure\ terminal
+DEBUG:netmiko:_read_channel_expect read_data: c
+DEBUG:netmiko:_read_channel_expect read_data: onf
+DEBUG:netmiko:_read_channel_expect read_data: igur
+DEBUG:netmiko:_read_channel_expect read_data: e term
+DEBUG:netmiko:_read_channel_expect read_data: inal
+DEBUG:netmiko:Pattern found: configure\ terminal configure terminal
+DEBUG:netmiko:Pattern is: SW08
+DEBUG:netmiko:_read_channel_expect read_data: 
+
+DEBUG:netmiko:_read_channel_expect read_data: Enter configuration commands, one per line.  End with CNTL/Z.
+SW08(config)#
+DEBUG:netmiko:Pattern found: SW08 
+Enter configuration commands, one per line.  End with CNTL/Z.
+SW08(config)#
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:Pattern is: #
+DEBUG:netmiko:_read_channel_expect read_data: 
+
+DEBUG:netmiko:_read_channel_expect read_data: SW08(config)#
+DEBUG:netmiko:Pattern found: # 
+SW08(config)#
+DEBUG:netmiko:write_channel: b'no router ospf 100\n'
+DEBUG:netmiko:Pattern is: no\ router\ ospf\ 100
+DEBUG:netmiko:_read_channel_expect read_data: n
+DEBUG:netmiko:_read_channel_expect read_data: o r
+DEBUG:netmiko:_read_channel_expect read_data: oute
+DEBUG:netmiko:_read_channel_expect read_data: r os
+DEBUG:netmiko:_read_channel_expect read_data: pf 10
+DEBUG:netmiko:_read_channel_expect read_data: 0
+
+DEBUG:netmiko:Pattern found: no\ router\ ospf\ 100 no router ospf 100
+
+DEBUG:netmiko:Pattern is: (?:SW08|#)
+DEBUG:netmiko:_read_channel_expect read_data: SW08(config)#
+DEBUG:netmiko:Pattern found: (?:SW08|#) SW08(config)#
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:Pattern is: #
+DEBUG:netmiko:_read_channel_expect read_data: 
+
+DEBUG:netmiko:_read_channel_expect read_data: SW08(config)#
+DEBUG:netmiko:Pattern found: # 
+SW08(config)#
+DEBUG:netmiko:write_channel: b'end\n'
+DEBUG:netmiko:Pattern is: end
+DEBUG:netmiko:_read_channel_expect read_data: e
+DEBUG:netmiko:_read_channel_expect read_data: nd
+
+DEBUG:netmiko:Pattern found: end end
+
+DEBUG:netmiko:Pattern is: \#
+DEBUG:netmiko:_read_channel_expect read_data: SW08#
+DEBUG:netmiko:Pattern found: \# SW08#
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:Pattern is: #
+DEBUG:netmiko:_read_channel_expect read_data: 
+
+DEBUG:netmiko:_read_channel_expect read_data: SW08#
+DEBUG:netmiko:Pattern found: # 
+SW08#
+DEBUG:netmiko:exit_config_mode: end
+SW08#
+DEBUG:netmiko:configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+SW08(config)#no router ospf 100
+SW08(config)#end
+SW08#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+SW08#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:[find_prompt()]: prompt is SW08#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'show ip ospf nei gi0/0 det | i up\n'
+DEBUG:netmiko:Pattern is: show\ ip\ ospf\ nei\ gi0/0\ det\ \|\ i\ up
+DEBUG:netmiko:_read_channel_expect read_data: s
+DEBUG:netmiko:_read_channel_expect read_data: how
+DEBUG:netmiko:_read_channel_expect read_data:  ip 
+DEBUG:netmiko:_read_channel_expect read_data: ospf 
+DEBUG:netmiko:_read_channel_expect read_data: nei 
+DEBUG:netmiko:_read_channel_expect read_data: gi0/0
+DEBUG:netmiko:_read_channel_expect read_data:  de
+DEBUG:netmiko:_read_channel_expect read_data: t | i
+DEBUG:netmiko:_read_channel_expect read_data:  up
+
+DEBUG:netmiko:Pattern found: show\ ip\ ospf\ nei\ gi0/0\ det\ \|\ i\ up show ip ospf nei gi0/0 det | i up
+
+DEBUG:netmiko:read_channel: SW08#
+DEBUG:netmiko:write_channel: b'clear ip ospf process\n'
+DEBUG:netmiko:send_command_timing current output: 
+DEBUG:netmiko:read_channel: clear ip ospf process
+SW08#
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:send_command_timing final output: 
+DEBUG:paramiko.transport:EOF in transport thread
+DEBUG:paramiko.transport:EOF in transport thread

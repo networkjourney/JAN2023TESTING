@@ -1,0 +1,17 @@
+---
+loadbalancer:
+ platform: ios
+ username: admin
+ password: cisco
+ data:
+   ntp:
+    servers:
+      - 1.1.1.1
+
+
+routers:
+ platform: ios
+ username: admin
+ password: cisco
+
+...

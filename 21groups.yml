@@ -1,0 +1,14 @@
+---
+F5:
+ username: admin
+ password: cisco
+ platform: ios
+
+
+
+cisco:
+ username: admin
+ password: cisco
+ platform: ios
+
+...

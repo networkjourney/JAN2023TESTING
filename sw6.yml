@@ -1,0 +1,8 @@
+---
+- get_interfaces_ip:
+     GigabitEthernet0/0:
+      ipv4:
+        172.16.26.249:
+           prefix_length: 21
+
+

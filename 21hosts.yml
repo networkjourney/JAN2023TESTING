@@ -1,0 +1,24 @@
+---
+IOS1:
+ hostname: 172.16.26.160
+
+IOS2:
+ hostname: 172.16.26.165
+ groups:
+   - F5
+
+IOS3:
+ hostname: 172.16.26.161
+ groups:
+   - cisco
+
+IOS4:
+ hostname: 172.16.26.166
+
+IOS5:
+ hostname: 172.16.26.143
+
+IOS6:
+ hostname: 172.16.26.150
+
+...
